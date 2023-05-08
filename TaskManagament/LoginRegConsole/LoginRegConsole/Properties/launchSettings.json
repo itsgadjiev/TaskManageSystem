@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\bin\\Debug\\net6.0\\LoginRegConsole.exe"
+    },
+    "Profile 2": {
+      "commandName": "Executable"
+    }
+  }
+}
