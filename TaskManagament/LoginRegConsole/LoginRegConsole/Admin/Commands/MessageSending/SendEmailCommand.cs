@@ -34,13 +34,13 @@ namespace LoginRegConsole.Admin.Commands.MessageSending
 
 			} while (receivingUser == null);
 
-			foreach (var item in properties)
+			foreach (var property in properties)
 			{
 				do
 				{
-					Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT) + item.Name);
+                    Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT)+ " " + property.Name.Substring(property.Name.Length-2,2));
 					messageBody = Console.ReadLine();
-					item.SetValue(content, messageBody);
+					property.SetValue(content, messageBody);
 				} while (!CommonValidation.IsLengthBeetween(5,50, messageBody));
 
 			}

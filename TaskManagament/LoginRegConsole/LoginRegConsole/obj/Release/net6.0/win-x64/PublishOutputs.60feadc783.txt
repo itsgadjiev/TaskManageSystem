@@ -1,0 +1,2 @@
+C:\Users\Jake\Desktop\P332\HomeTasks\4. Terminalda login və register sisteminin yazılması\LoginRegConsole\LoginRegConsole\bin\Release\net6.0\win-x64\publish\LoginRegConsole.pdb
+C:\Users\Jake\Desktop\P332\HomeTasks\4. Terminalda login və register sisteminin yazılması\LoginRegConsole\LoginRegConsole\bin\Release\net6.0\win-x64\publish\LoginRegConsole.exe

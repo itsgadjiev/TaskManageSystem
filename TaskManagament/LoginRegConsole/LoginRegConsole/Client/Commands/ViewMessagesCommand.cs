@@ -35,7 +35,7 @@ namespace LoginRegConsole.Client.Commands
 
 			if (counter == 1)
 			{
-				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
+				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(KeysForLanguages.NOT_FOUND));
 			}
 
 

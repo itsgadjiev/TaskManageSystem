@@ -4,6 +4,7 @@ using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using SendGrid.Helpers.Mail.Model;
 using System.Reflection;
 using System.Reflection.Metadata;
 
@@ -21,10 +22,26 @@ namespace LoginRegConsole.Services
 
 		public string PrepareMessageForBlog(string preparedMessage, Blog blog)
 		{
+
+
 			return preparedMessage
 				.Replace(MessageTemplateKeywords.USER_NAME_FOR_BLOG, blog.PostingUser.Name)
 				.Replace(MessageTemplateKeywords.USER_SURNAME_FOR_BLOG, blog.PostingUser.Surname)
 				.Replace(MessageTemplateKeywords.BLOG_STATUS, blog.BlogStatus.ToString());
+		}
+
+		public Content PrepareContentForBlog(string preparedMessage,Blog blog)
+		{
+			Content content = new Content();
+			Type type = typeof(Content);
+			PropertyInfo[] propsOfContent = type.GetProperties();
+
+			foreach (PropertyInfo propertyInfo in propsOfContent)
+			{
+				propertyInfo.SetValue(,);
+			}
+
+			return 
 		}
 		public void SendMessage(User user, string preparedMessage)
 		{
@@ -41,6 +58,7 @@ namespace LoginRegConsole.Services
 
 		public void SendRejectionMessageForBlog(Blog blog)
 		{
+
 			SendMessage(blog.PostingUser, PrepareMessageForBlog(MessageTemplate.REJECTED, blog));
 		}
 		public void SendAcceptionMessageForBlog(Blog blog)
@@ -64,7 +82,7 @@ namespace LoginRegConsole.Services
 			var msg = new SendGridMessage()
 			{
 				From = new EmailAddress(KeyForMessageService.MESSAGE_SENDER_EMAIL, KeyForMessageService.MESSAGE_SENDER_FULLNAME),
-				Subject = $"{messageService.PrepareMessageForBlog((string)field.GetValue(null), blog)}",
+				Subject = $"Blog status",
 				PlainTextContent = $"{messageService.PrepareMessageForBlog((string)field.GetValue(null), blog)}",
 			};
 			msg.AddTo(new EmailAddress($"{blog.PostingUser.Email}", $"{blog.PostingUser.Name}"));

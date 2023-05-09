@@ -49,13 +49,7 @@ namespace LoginRegConsole.Services
 			}
 		}
 
-		public static string CheckAndReturnSystemLanguage()
-		{
-			if (CurrentLanguage is SystemLanguage.AZ) { return SystemLanguage.AZ.ToString(); }
-			else if (CurrentLanguage is SystemLanguage.RU) { return SystemLanguage.RU.ToString(); }
-			else if (CurrentLanguage is SystemLanguage.EN) { return SystemLanguage.EN.ToString(); }
-			return string.Empty;
-		}
+		
 	}
 }
 
