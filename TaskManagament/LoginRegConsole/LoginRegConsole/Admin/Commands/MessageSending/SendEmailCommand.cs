@@ -22,6 +22,8 @@ namespace LoginRegConsole.Admin.Commands.MessageSending
 		{
 			UserRepository userRep = new UserRepository();
 			MessageRepository messageRepository = new MessageRepository();
+
+
 			string messageBody = string.Empty;
 			User receivingUser = null;
 			Content content = new Content();

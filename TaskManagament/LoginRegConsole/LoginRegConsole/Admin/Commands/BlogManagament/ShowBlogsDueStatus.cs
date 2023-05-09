@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
 {
-	public class ShowWaitingBlogs
+	public class ShowBlogsDueStatus
 	{
-		public static void Handle()
+		public static void Handle(BlogStatus blogStatus)
 		{
 			BlogRepository blogRepository = new BlogRepository();
 			int counter = 1;
@@ -24,7 +24,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 							.Replace("{key}", KeysForLanguages.CONTENT.ToString())
 							.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
 
-			foreach (var blog in blogRepository.GetAllBy(b => b.BlogStatus == Constants.Enums.BlogStatus.WAITING))
+			foreach (var blog in blogRepository.GetAllBy(b => b.BlogStatus == blogStatus))
 			{
 				Type type = typeof(Content);
 				PropertyInfo[] propOfCon = type.GetProperties();

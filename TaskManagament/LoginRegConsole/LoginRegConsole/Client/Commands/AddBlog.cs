@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using LoginRegConsole.Database;
@@ -11,6 +12,7 @@ using LoginRegConsole.Helper;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validation.Blog;
 using LoginRegConsole.Validations.CommonValidations;
+using SendGrid.Helpers.Mail;
 
 namespace LoginRegConsole.Client.Commands
 {
@@ -29,17 +31,37 @@ namespace LoginRegConsole.Client.Commands
 		{
 			BlogRepository blogRepository = new BlogRepository();
 			MessageService messageService = new MessageService();
-			string blogTitle = _blogTitleValidation.Handle();
-			string blogBody = _blogBodyValidation.Handle();
-
-			Blog blog = new Blog(UserService.ActiveUser, blogTitle, blogBody);
-			messageService.SendMessageForBlogDueStatus(blog);
-
 			
+			Content contentForTitle = new Content();
+			Type typeForTitle = typeof(Content);
+			PropertyInfo[] propertiesOfTitle = typeForTitle.GetProperties();
+
+			string blogTitle = string.Empty;
+			string blogBody = string.Empty;
+
+			foreach (PropertyInfo propertyInfoForTitle in propertiesOfTitle)
+			{
+				blogTitle = _blogTitleValidation.Handle(propertyInfoForTitle);
+				propertyInfoForTitle.SetValue(contentForTitle, blogTitle);
+			}
+
+			Content contentForBody = new Content();
+			Type typeForBody = typeof(Content);
+			PropertyInfo[] propertiesOfBody = typeForBody.GetProperties();
+
+
+			foreach (PropertyInfo propertyInfoForBody in propertiesOfBody)
+			{
+				blogTitle = _blogBodyValidation.Handle(propertyInfoForBody);
+				propertyInfoForBody.SetValue(contentForBody, blogTitle);
+			}
+
+			Blog blog = new Blog(UserService.ActiveUser, contentForTitle, contentForBody);
+			messageService.SendMessageForBlogDueStatus(blog);
 
 			blogRepository.Add(blog);
 
-			
+
 
 		}
 	}

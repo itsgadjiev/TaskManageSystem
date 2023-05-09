@@ -2,6 +2,7 @@
 using LoginRegConsole.Admin.Commands.MessageSending;
 using LoginRegConsole.Admin.Commands.UserManagament;
 using LoginRegConsole.BaseRegistrationHelper;
+using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Identity;
@@ -64,13 +65,13 @@ namespace LoginRegConsole.Admin
 						registerCommand.Register();
 						break;
 					case "11":
-						ShowAcceptedBlogs.Handle();
+						ShowBlogsDueStatus.Handle(BlogStatus.APPROVED);
 						break;
 					case "12":
-						ShowWaitingBlogs.Handle();
+						ShowBlogsDueStatus.Handle(BlogStatus.WAITING);
 						break;
 					case "13":
-						ShowRejectedBlogs.Handle();
+						ShowBlogsDueStatus.Handle(BlogStatus.REJECTED);
 						break;
 					case "14":
 						AcceptBlog acceptBlog = new AcceptBlog();

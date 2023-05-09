@@ -17,7 +17,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
             int counter = 1;
             foreach (var blog in blogRepository.GetAllBy(b=>b.BlogStatus == Constants.Enums.BlogStatus.APPROVED))
             {
-                CustomConsole.GreenLine($"{counter++}|| Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{blog.BlogTitle} || Body:{blog.BlogBody} || PostTime:{blog.PostTime} || Creation date:{blog.CreatedAt}");
+                CustomConsole.GreenLine($"{counter++}|| Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{blog.Title} || Body:{blog.Body} || PostTime:{blog.PostTime} || Creation date:{blog.CreatedAt}");
             }
 
             if (counter==1)

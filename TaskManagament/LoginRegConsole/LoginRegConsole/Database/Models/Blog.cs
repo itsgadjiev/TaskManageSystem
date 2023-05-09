@@ -12,17 +12,17 @@ namespace LoginRegConsole.Database.Models
     {
         public User PostingUser { get; set; }
         protected static int _idCounter { get; set; }
-        public string BlogTitle { get; set; }
-        public string BlogBody { get; set; }
+        public Content Title { get; set; }
+        public Content Body { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime PostTime { get; set; }
         public BlogStatus BlogStatus { get; set; }
-        public Blog(User user,string blogTitle, string blogBody)
+        public Blog(User user,Content blogTitle, Content blogBody)
         {
             PostingUser=user;
             Id = ++_idCounter;
-            BlogTitle = blogTitle;
-            BlogBody = blogBody;
+            Title = blogTitle;
+            Body = blogBody;
             CreatedAt = DateTime.Now;
             BlogStatus = BlogStatus.WAITING;
 

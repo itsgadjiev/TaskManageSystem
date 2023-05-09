@@ -4,6 +4,7 @@ using LoginRegConsole.Validations.InputValidations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,11 +12,11 @@ namespace LoginRegConsole.Validation.Blog
 {
     public class BlogBodyValidation
 	{
-		public string Handle()
+		public string Handle(PropertyInfo propertyInfo)
 		{
 			while (true)
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT));
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT) + " " + propertyInfo.Name.Substring(propertyInfo.Name.Length - 2, 2));
 				string blogBody = Console.ReadLine();
 
 				if (CommonValidation.IsLengthBeetween(InputLengthValidationsForBlog.MIN_LENGTH_BLOG_BODY, InputLengthValidationsForBlog.MAX_LENGTH_BLOG_BODY, blogBody))
