@@ -23,52 +23,97 @@ namespace LoginRegConsole.Services
 		public string PrepareMessageForBlog(string preparedMessage, Blog blog)
 		{
 
-
 			return preparedMessage
 				.Replace(MessageTemplateKeywords.USER_NAME_FOR_BLOG, blog.PostingUser.Name)
 				.Replace(MessageTemplateKeywords.USER_SURNAME_FOR_BLOG, blog.PostingUser.Surname)
 				.Replace(MessageTemplateKeywords.BLOG_STATUS, blog.BlogStatus.ToString());
 		}
 
-		public Content PrepareContentForBlog(string preparedMessage,Blog blog)
+		private Content PrepareContentForBlogEmail(Blog blog)
 		{
 			Content content = new Content();
 			Type type = typeof(Content);
 			PropertyInfo[] propsOfContent = type.GetProperties();
 
-			foreach (PropertyInfo propertyInfo in propsOfContent)
+			if (blog.BlogStatus == Constants.Enums.BlogStatus.APPROVED)
 			{
-				propertyInfo.SetValue(,);
+				foreach (PropertyInfo propertyInfo in propsOfContent)
+				{
+					if (propertyInfo.Name == "CONTENT_AZ")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.APPROVED_BLOG_AZ, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_RU")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.APPROVED_BLOG_RU, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_EN")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.APPROVED_BLOG_EN, blog));
+						continue;
+					}
+				}
+			}
+			if (blog.BlogStatus == Constants.Enums.BlogStatus.REJECTED)
+			{
+				foreach (PropertyInfo propertyInfo in propsOfContent)
+				{
+					if (propertyInfo.Name == "CONTENT_AZ")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.REJECTED_BLOG_AZ, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_RU")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.REJECTED_BLOG_RU, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_EN")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.REJECTED_BLOG_EN, blog));
+						continue;
+					}
+				}
+			}
+			if (blog.BlogStatus == Constants.Enums.BlogStatus.WAITING)
+			{
+				foreach (PropertyInfo propertyInfo in propsOfContent)
+				{
+					if (propertyInfo.Name == "CONTENT_AZ")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.WAITING_BLOG_AZ, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_RU")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.WAITING_BLOG_RU, blog));
+						continue;
+					}
+					else if (propertyInfo.Name == "CONTENT_EN")
+					{
+						propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.WAITING_BLOG_EN, blog));
+						continue;
+					}
+				}
 			}
 
-			return 
+			return content;
 		}
-		public void SendMessage(User user, string preparedMessage)
+	
+
+		public void SendMessage(User user, Content content)
 		{
-			Email sendingMessage = new Email(preparedMessage, user, UserService.ActiveUser);
+			Email sendingMessage = new Email(content,UserService.ActiveUser,user);
 			_messageRepository.Add(sendingMessage);
 		}
-
-		public void SendMessage1(User user, Content content)
+		
+		public void SendMessageForBlogDueStatus(Blog blog)
 		{
-			Email sendingMessage = new Email(content, user, UserService.ActiveUser);
-			_messageRepository.Add(sendingMessage);
+			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
-
-
-		public void SendRejectionMessageForBlog(Blog blog)
-		{
-
-			SendMessage(blog.PostingUser, PrepareMessageForBlog(MessageTemplate.REJECTED, blog));
-		}
-		public void SendAcceptionMessageForBlog(Blog blog)
-		{
-			SendMessage(blog.PostingUser, PrepareMessageForBlog(MessageTemplate.APPROVED, blog));
-		}
-		public void SendProcessingMessageForBlog(Blog blog)
-		{
-			SendMessage(blog.PostingUser, PrepareMessageForBlog(MessageTemplate.WAITING, blog));
-		}
+		
 
 
 		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
@@ -91,9 +136,6 @@ namespace LoginRegConsole.Services
 			Console.WriteLine(response.StatusCode);
 
 		}
-	
-
-
 
 
 	}

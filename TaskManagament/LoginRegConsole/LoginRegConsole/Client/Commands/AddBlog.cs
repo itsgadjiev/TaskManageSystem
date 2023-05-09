@@ -33,8 +33,10 @@ namespace LoginRegConsole.Client.Commands
 			string blogBody = _blogBodyValidation.Handle();
 
 			Blog blog = new Blog(UserService.ActiveUser, blogTitle, blogBody);
-			messageService.SendProcessingMessageForBlog(blog);
-			await MessageService.SendMessageDueStatusForBlogIRL(blog);
+			messageService.SendMessageForBlogDueStatus(blog);
+
+			//messageService.SendProcessingMessageForBlog(blog);
+			//await MessageService.SendMessageDueStatusForBlogIRL(blog);
 
 			blogRepository.Add(blog);
 

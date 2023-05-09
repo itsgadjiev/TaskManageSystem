@@ -32,8 +32,8 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
 				return;
 			}
-			_messageService.SendRejectionMessageForBlog(blog);
 			blog.BlogStatus = Constants.Enums.BlogStatus.REJECTED;
+			_messageService.SendMessageForBlogDueStatus(blog);
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 
 

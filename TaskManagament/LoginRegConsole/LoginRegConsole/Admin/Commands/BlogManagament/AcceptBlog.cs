@@ -36,7 +36,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 			}
 			blog.BlogStatus = Constants.Enums.BlogStatus.APPROVED;
 			blog.PostTime = DateTime.Now;
-			_messageService.SendAcceptionMessageForBlog(blog);
+			_messageService.SendMessageForBlogDueStatus(blog);
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 
 		}
