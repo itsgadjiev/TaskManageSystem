@@ -1,4 +1,5 @@
 ﻿using LoginRegConsole.Constants;
+using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Constants.Message;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
@@ -35,7 +36,7 @@ namespace LoginRegConsole.Services
 			Type type = typeof(Content);
 			PropertyInfo[] propsOfContent = type.GetProperties();
 
-			if (blog.BlogStatus == Constants.Enums.BlogStatus.APPROVED)
+			if (blog.BlogStatus == BlogStatus.APPROVED)
 			{
 				foreach (PropertyInfo propertyInfo in propsOfContent)
 				{
@@ -56,7 +57,7 @@ namespace LoginRegConsole.Services
 					}
 				}
 			}
-			if (blog.BlogStatus == Constants.Enums.BlogStatus.REJECTED)
+			else if (blog.BlogStatus == BlogStatus.REJECTED)
 			{
 				foreach (PropertyInfo propertyInfo in propsOfContent)
 				{
@@ -77,7 +78,7 @@ namespace LoginRegConsole.Services
 					}
 				}
 			}
-			if (blog.BlogStatus == Constants.Enums.BlogStatus.WAITING)
+			else if (blog.BlogStatus == BlogStatus.WAITING)
 			{
 				foreach (PropertyInfo propertyInfo in propsOfContent)
 				{
@@ -101,20 +102,17 @@ namespace LoginRegConsole.Services
 
 			return content;
 		}
-	
 
 		public void SendMessage(User user, Content content)
 		{
-			Email sendingMessage = new Email(content,UserService.ActiveUser,user);
+			Email sendingMessage = new Email(content, UserService.ActiveUser, user);
 			_messageRepository.Add(sendingMessage);
 		}
-		
+
 		public void SendMessageForBlogDueStatus(Blog blog)
 		{
 			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
-		
-
 
 		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
 		{

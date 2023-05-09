@@ -35,8 +35,7 @@ namespace LoginRegConsole.Client.Commands
 			Blog blog = new Blog(UserService.ActiveUser, blogTitle, blogBody);
 			messageService.SendMessageForBlogDueStatus(blog);
 
-			//messageService.SendProcessingMessageForBlog(blog);
-			//await MessageService.SendMessageDueStatusForBlogIRL(blog);
+			
 
 			blogRepository.Add(blog);
 
