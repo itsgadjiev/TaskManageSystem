@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LoginRegConsole.Database.Models;
+﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Helper;
@@ -11,8 +6,8 @@ using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
 {
-    public class RejectBlog
-    {
+	public class RejectBlog
+	{
 		private readonly MessageService _messageService;
 
 		public RejectBlog()
@@ -21,12 +16,10 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		}
 		public void Handle()
 		{
-
-			FindBlogById findBlogById = new FindBlogById();
+			BlogRepository blogRepository = new BlogRepository();
 
 			int id = CustomTryParseForOptions.Handle();
-			Blog blog = findBlogById.Handle(id);
-
+			Blog blog = blogRepository.GetBy(b => b.Id == id);
 			if (blog is null)
 			{
 				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));

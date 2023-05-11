@@ -5,9 +5,7 @@ using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using SendGrid;
 using SendGrid.Helpers.Mail;
-using SendGrid.Helpers.Mail.Model;
 using System.Reflection;
-using System.Reflection.Metadata;
 
 
 namespace LoginRegConsole.Services

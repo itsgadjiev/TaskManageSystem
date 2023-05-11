@@ -7,6 +7,7 @@ using LoginRegConsole.Extras;
 using LoginRegConsole.Helper;
 using LoginRegConsole.Identity;
 using LoginRegConsole.Services;
+using LoginRegConsole.Shared.Commands;
 using System.Data;
 using System.Text;
 using System.Xml.Linq;
@@ -46,6 +47,9 @@ namespace LoginRegConsole
 						break;
 					case "4":
 						LocalizationService.ChangeLanguageOfSystem();
+						break;
+					case "5":
+						ShowBlogsWithComments.Handle();
 						break;
 					default:
 						break;

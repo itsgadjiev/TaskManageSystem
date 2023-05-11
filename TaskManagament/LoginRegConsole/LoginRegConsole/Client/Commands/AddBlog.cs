@@ -58,7 +58,7 @@ namespace LoginRegConsole.Client.Commands
 
 			Blog blog = new Blog(UserService.ActiveUser, contentForTitle, contentForBody);
 			messageService.SendMessageForBlogDueStatus(blog);
-
+			blog.ShowBlogInfo();
 			blogRepository.Add(blog);
 
 

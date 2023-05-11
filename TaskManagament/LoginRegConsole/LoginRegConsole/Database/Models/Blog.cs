@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using LoginRegConsole.Constants.Enums;
+﻿using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Database.BaseModel;
 
 namespace LoginRegConsole.Database.Models
@@ -38,9 +32,13 @@ namespace LoginRegConsole.Database.Models
 			Body = blogBody;
 			CreatedAt = DateTime.Now;
 			BlogStatus = BlogStatus.WAITING;
-			PostTime = DateTime.Now;
 			Code = _code;
 		}
-		public List<BlogComment>? BlogComments { get; set; }
+		public List<BlogComment>? BlogComments { get; private set; } = AppDbContext.BlogComments;
+
+		public void ShowBlogInfo()
+		{
+            Console.WriteLine($"Code:{Code} CreatedAt:{CreatedAt}");
+        }
 	}
 }

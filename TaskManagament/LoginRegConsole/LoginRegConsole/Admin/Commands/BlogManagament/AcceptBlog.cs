@@ -23,11 +23,10 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		}
 		public void Handle()
 		{
-
-			FindBlogById findBlogById = new FindBlogById();
+			BlogRepository blogRepository = new BlogRepository();
 
 			int id = CustomTryParseForOptions.Handle();
-			Blog blog = findBlogById.Handle(id);
+			Blog blog = blogRepository.GetBy(b=>b.Id==id);
 
 			if (blog is null)
 			{
