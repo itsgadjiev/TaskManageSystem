@@ -11,16 +11,16 @@ namespace LoginRegConsole.Database.Models
 {
 	public class Blog : BaseEntity
 	{
-		private string _name;
-		public string Name
+		private string _code;
+		public string Code
 		{
-			get { return _name; }
+			get { return _code; }
 			set
 			{
 				Random random = new Random();
 				int minNumber = 10000;
 				int maxNumber = 99999;
-				_name = "BL" + random.Next(minNumber, maxNumber).ToString();
+				_code = "BL" + random.Next(minNumber, maxNumber).ToString();
 			}
 		}
 		public User PostingUser { get; set; }
@@ -39,7 +39,7 @@ namespace LoginRegConsole.Database.Models
 			CreatedAt = DateTime.Now;
 			BlogStatus = BlogStatus.WAITING;
 			PostTime = DateTime.Now;
-			Name = _name;
+			Code = _code;
 		}
 		public List<BlogComment>? BlogComments { get; set; }
 	}

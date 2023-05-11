@@ -25,10 +25,44 @@ namespace LoginRegConsole.Services
 		{
 
 			return preparedMessage
-				.Replace(MessageTemplateKeywords.BLOG_NAME, blog.Name)
+				.Replace(MessageTemplateKeywords.BLOG_CODE, blog.Code)
 				.Replace(MessageTemplateKeywords.USER_NAME_FOR_BLOG, blog.PostingUser.Name)
 				.Replace(MessageTemplateKeywords.USER_SURNAME_FOR_BLOG, blog.PostingUser.Surname)
 				.Replace(MessageTemplateKeywords.BLOG_STATUS, blog.BlogStatus.ToString());
+		}
+
+		private Content PrepareContentForBlogCommentEmail(Blog blog)
+		{
+			Content content = new Content();
+			Type type = typeof(Content);
+			PropertyInfo[] propsOfContent = type.GetProperties();
+
+			foreach (PropertyInfo propertyInfo in propsOfContent)
+			{
+				if (propertyInfo.Name == "CONTENT_AZ")
+				{
+					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_AZ, blog));
+					continue;
+				}
+				else if (propertyInfo.Name == "CONTENT_RU")
+				{
+					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_RU, blog));
+					continue;
+				}
+				else if (propertyInfo.Name == "CONTENT_EN")
+				{
+					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_EN, blog));
+					continue;
+				}
+			}
+
+			return content;
+
+		}
+
+		public void SendMessageToPosterForBlogComment(BlogComment blogComment)
+		{
+			SendMessage(blogComment.Blog.PostingUser, PrepareContentForBlogCommentEmail(blogComment.Blog));
 		}
 
 		private Content PrepareContentForBlogEmail(Blog blog)
@@ -114,8 +148,6 @@ namespace LoginRegConsole.Services
 		{
 			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
-
-
 
 		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
 		{

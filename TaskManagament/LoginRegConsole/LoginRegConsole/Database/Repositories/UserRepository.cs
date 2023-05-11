@@ -3,20 +3,15 @@ using LoginRegConsole.Database.BaseModels;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoginRegConsole.Database.Repositories
 {
-	public class UserRepository:BaseRepository<User>
+	public class UserRepository : BaseRepository<User>
 	{
-		public UserRepository() 
+		public UserRepository()
 			: base(AppDbContext.AppUsers)
 		{ }
-		
+
 		public User FindUserByEmail()
 		{
 			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.EMAIL_REQUEST));
@@ -82,6 +77,6 @@ namespace LoginRegConsole.Database.Repositories
 				}
 			}
 		}
-		
+
 	}
 }

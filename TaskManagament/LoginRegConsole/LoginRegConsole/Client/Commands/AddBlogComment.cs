@@ -10,6 +10,7 @@ namespace LoginRegConsole.Client.Commands
 	{
 		public void Handle()
 		{
+			MessageService messageService = new MessageService();
 			BlogRepository BlogRepository = new BlogRepository();
 			BlogCommentRepository blogCommentRepository = new BlogCommentRepository();
 			Content content = new Content();
@@ -20,9 +21,9 @@ namespace LoginRegConsole.Client.Commands
 
 			do
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NAME_REQUEST) + "blog");
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NAME_REQUEST) + " " + "blog");
 				string blogName = Console.ReadLine();
-				blog = BlogRepository.GetBy(x => x.Name == blogName);
+				blog = BlogRepository.GetBy(b => b.Code == blogName);
 
 			} while (blog == null);
 
@@ -37,8 +38,8 @@ namespace LoginRegConsole.Client.Commands
 				} while (!CommonValidation.IsLengthBeetween(5, 50, messageBody));
 
 			}
-
 			BlogComment blogComment = new BlogComment(blog, UserService.ActiveUser, content);
+			messageService.SendMessageToPosterForBlogComment(blogComment);
 			blogCommentRepository.Add(blogComment);
 
 		}

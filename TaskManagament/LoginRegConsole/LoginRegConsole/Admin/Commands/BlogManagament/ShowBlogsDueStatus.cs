@@ -32,7 +32,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 				{
 					if (prop.Equals(property))
 					{
-						CustomConsole.WarningLine($"{counter++}|| Blog Name:{blog.Name} || ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{prop.GetValue(blog.Title)} || Body:{prop.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
+						CustomConsole.WarningLine($"{counter++}|| Blog Name:{blog.Code} || ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{prop.GetValue(blog.Title)} || Body:{prop.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
 					}
 				}
 			}

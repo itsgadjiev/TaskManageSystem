@@ -55,7 +55,7 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 		public const string INCORRECT_LENGTH_AZ = "Uzunluq yalnishdir";
 		public const string EMAIL_REQUEST_AZ = "Emaili daxil edin";
 		public const string EXSISTING_EMAIL_AZ = "bele Email var";
-		public const string NAME_REQUEST_AZ = "Adinizi daxil edin";
+		public const string NAME_REQUEST_AZ = "Ad daxil edin";
 		public const string SURNAME_REQUEST_AZ = "Soyadinizi daxil edin";
 		public const string PASSWORD_REQUEST_AGAIN_AZ = "Parolunuzu tezden daxil edin";
 		public const string PASSWORD_REQUEST_AZ = "Parolunuzu daxil edin";
@@ -76,13 +76,16 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 					   "2-Hesabi Bagla\n" +
 					   "3-Mesajlara bax!\n" +
 					   "4-Blog elave et\n" +
+					   "5-Bloga comment yaz\n" +
+					   "6-Sistemin Dilini Deyishdir\n" +
 					   "0-Cixish";
 
 		public const string MAIN_SELECT_OPTIONS_AZ = "Ne elemek isteyirsiniz\n" +
 					"1-Login\n" +
 					"2-Register\n" +
 					"3-Cixish\n" +
-					"4-Dili deyish";
+					"4-Dili deyish\n" +
+					"5-Butun testiq edilmihs Bloglarin commentleri goster";
 
 		public const string CHOICE_OPTION_CHN = "你的选择：";
 		public const string SUCCESFULL_ADDING_CHN = "添加成功";
@@ -219,13 +222,16 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 					"2-Close Account\n" +
 					"3-View Messages\n" +
 					"4-Add Blog\n" +
+					"5-Add comment to the Blog\n" +
+					"6-Change Language\n" +
 					"0-Log out";
 
 		public const string MAIN_SELECT_OPTIONS_EN = "What you want to do\n" +
 					"1-Login\n" +
 					"2-Register\n" +
 					"3-Exit\n" +
-					"4-Change Language";
+					"4-Change Language\n" +
+					"5-Show all accepted blogs with comments";
 
 
 		public const string CHOICE_OPTION_RU = "Ваш выбор:";
@@ -288,8 +294,9 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 			"2-Закрыть аккаунт\n" +
 			"3-Просмотреть сообщения\n" +
 			"4-Добавить блог\n" +
+			"5-Добавить комент к блогу\n" +
+			"6-Сменить язык\n" +
 			"0-Выйти";
-
 
 		public const string LANGUAGE_CHANGE_OPTIONS_RU = "На какой язык хотите перейти\n" +
 					"1-Aze\n" +
@@ -298,11 +305,11 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 					"4-Китайский";
 
 
-
 		public const string MAIN_SELECT_OPTIONS_RU = "Что хотите сделать\n" +
 					"1-Логин\n" +
 					"2-Регистрация\n" +
 					"3-Выход\n" +
-					"4-Сменить язык";
+					"4-Сменить язык\n" +
+					"5-Показать все принятые блоги с коментами\n";
 	}
 }
