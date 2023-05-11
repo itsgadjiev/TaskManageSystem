@@ -17,13 +17,13 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public static void Handle(BlogStatus blogStatus)
 		{
 			BlogRepository blogRepository = new BlogRepository();
-			int counter = 1;
 			Type inputsOnSYSLanguage = typeof(Content);
 			PropertyInfo property = inputsOnSYSLanguage
 				.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
 							.Replace("{key}", KeysForLanguages.CONTENT.ToString())
 							.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
 
+			int counter = 1;
 			foreach (var blog in blogRepository.GetAllBy(b => b.BlogStatus == blogStatus))
 			{
 				Type type = typeof(Content);
@@ -32,7 +32,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 				{
 					if (prop.Equals(property))
 					{
-						CustomConsole.WarningLine($"{counter++}|| ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{prop.GetValue(blog.Title)} || Body:{prop.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
+						CustomConsole.WarningLine($"{counter++}|| Blog Name:{blog.Name} || ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{prop.GetValue(blog.Title)} || Body:{prop.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
 					}
 				}
 			}

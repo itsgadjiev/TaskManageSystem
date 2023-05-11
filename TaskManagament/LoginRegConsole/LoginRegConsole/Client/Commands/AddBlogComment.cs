@@ -1,31 +1,31 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
-using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validations.CommonValidations;
 using System.Reflection;
 
-namespace LoginRegConsole.Admin.Commands.MessageSending
+namespace LoginRegConsole.Client.Commands
 {
-	public class SendEmailCommand
+	public class AddBlogComment
 	{
-		public static void Handle()
+		public void Handle()
 		{
-			UserRepository userRep = new UserRepository();
-			MessageRepository messageRepository = new MessageRepository();
-
-
-			string messageBody = string.Empty;
-			User receivingUser = null;
+			BlogRepository BlogRepository = new BlogRepository();
+			BlogCommentRepository blogCommentRepository = new BlogCommentRepository();
 			Content content = new Content();
 			Type type = typeof(Content);
 			PropertyInfo[] properties = type.GetProperties();
+			string messageBody = string.Empty;
+			Blog blog = null;
 
 			do
 			{
-				receivingUser = userRep.FindUserByEmail();
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NAME_REQUEST) + "blog");
+				string blogName = Console.ReadLine();
+				blog = BlogRepository.GetBy(x => x.Name == blogName);
 
-			} while (receivingUser == null);
+			} while (blog == null);
+
 
 			foreach (var property in properties)
 			{
@@ -38,9 +38,8 @@ namespace LoginRegConsole.Admin.Commands.MessageSending
 
 			}
 
-			Email message = new Email(content, UserService.ActiveUser, receivingUser);
-			messageRepository.Add(message);
-			CustomConsole.GreenLine($"{LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.MESSAGE_SENDED)} : {UserService.ActiveUser.Email} ==> {receivingUser.Email}");
+			BlogComment blogComment = new BlogComment(blog, UserService.ActiveUser, content);
+			blogCommentRepository.Add(blogComment);
 
 		}
 	}

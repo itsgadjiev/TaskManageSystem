@@ -25,6 +25,7 @@ namespace LoginRegConsole.Services
 		{
 
 			return preparedMessage
+				.Replace(MessageTemplateKeywords.BLOG_NAME, blog.Name)
 				.Replace(MessageTemplateKeywords.USER_NAME_FOR_BLOG, blog.PostingUser.Name)
 				.Replace(MessageTemplateKeywords.USER_SURNAME_FOR_BLOG, blog.PostingUser.Surname)
 				.Replace(MessageTemplateKeywords.BLOG_STATUS, blog.BlogStatus.ToString());
@@ -114,6 +115,8 @@ namespace LoginRegConsole.Services
 			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
 
+
+
 		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
 		{
 			MessageService messageService = new MessageService();
@@ -134,7 +137,6 @@ namespace LoginRegConsole.Services
 			Console.WriteLine(response.StatusCode);
 
 		}
-
 
 	}
 }

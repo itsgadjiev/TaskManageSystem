@@ -10,6 +10,7 @@ namespace LoginRegConsole.Database
 		public static List<User> AppUsers { get; set; } = new List<User>();
 		public static List<Email> Messages { get; set; } = new List<Email>();
 		public static List<Blog> Blogs { get; set; } = new List<Blog>();
+		public static List<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
 		public static List<BaseInput> BaseInputs { get; set; } = new List<BaseInput>();
 		static AppDbContext()
 		{
@@ -40,8 +41,8 @@ namespace LoginRegConsole.Database
 			UserRepository userRepository = new UserRepository();
 			string name = "Aga";
 			string surname = "Badalov";
-			string email = "aghabadalov@yandex.com";
-			string password = "123321";
+			string email = "1";
+			string password = "1";
 
 			User user = new User(name, surname, email, password, UserRoles.USER);
 			userRepository.Add(user);
