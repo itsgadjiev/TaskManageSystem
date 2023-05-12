@@ -13,7 +13,7 @@ namespace LoginRegConsole.Validations.CommonValidations
 {
     public class CommonValidation
     {
-        private static UserRepository userRepository = new UserRepository();
+       
         public static bool IsLengthBeetween(int min, int max, string input)
         {
             if (input.Length > max || input.Length < min) return false;
@@ -21,6 +21,7 @@ namespace LoginRegConsole.Validations.CommonValidations
         }
         public static bool EmailValidation(string eMail, ref bool exsistingMail)
         {
+            UserRepository userRepository = new UserRepository();
             string emailPattern = @"^[a-zA-Z0-9]{10,30}@code\.edu\.az$";
             bool isValidEmail = !Regex.IsMatch(eMail, emailPattern);
             if (isValidEmail is false)
@@ -29,7 +30,7 @@ namespace LoginRegConsole.Validations.CommonValidations
             }
             else
             {
-                foreach (User user in userRepository.GetAll())
+                foreach (User user in userRepository.GetAll().ToList())
                 {
                     if (user.Email.ToLower() == eMail.ToLower())
                     {

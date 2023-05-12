@@ -11,7 +11,7 @@ namespace LoginRegConsole.Database.Repositories
 	public class BaseInputRepository : BaseRepository<BaseInput>
 	{
 		public BaseInputRepository()
-			: base(AppDbContext.BaseInputs) { }
+			: base("BaseInputs.json") { }
 
 		
 	}

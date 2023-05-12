@@ -111,3 +111,22 @@ C:\Users\Jake\Desktop\New folder (2)\TaskManageSystem\TaskManagament\LoginRegCon
 C:\Users\Jake\Desktop\New folder (2)\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.pdb
 C:\Users\Jake\Desktop\New folder (2)\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.genruntimeconfig.cache
 C:\Users\Jake\Desktop\New folder (2)\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\ref\LoginRegConsole.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.csproj.AssemblyReference.cache
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.AssemblyInfoInputs.cache
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.AssemblyInfo.cs
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.csproj.CoreCompileInputs.cache
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\refint\LoginRegConsole.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.pdb
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\LoginRegConsole.exe
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\LoginRegConsole.deps.json
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\LoginRegConsole.runtimeconfig.json
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\LoginRegConsole.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\LoginRegConsole.pdb
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.csproj.CopyComplete
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\LoginRegConsole.genruntimeconfig.cache
+C:\Users\Jake\Desktop\TaskManageSystem\TaskManagament\LoginRegConsole\LoginRegConsole\obj\Debug\net6.0\ref\LoginRegConsole.dll

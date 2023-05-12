@@ -9,9 +9,22 @@ namespace LoginRegConsole.Database.Repositories
 	public class UserRepository : BaseRepository<User>
 	{
 		public UserRepository()
-			: base(AppDbContext.AppUsers)
-		{ }
+			: base("AppUsers.json")
+		{ AdminCreationSeed(); }
 
+
+		public static void AdminCreationSeed()
+		{
+			BaseRepository<User> baseRepository = new BaseRepository<User>("AppUsers.json"); 
+			string name = "Super";
+			string surname = "Admin";
+			string email = "admin@gmail.com";
+			string password = "123321";
+
+			User user = new User(name, surname, email, password, UserRoles.ADMIN);
+			baseRepository.Add(user);
+
+		}
 		public User FindUserByEmail()
 		{
 			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.EMAIL_REQUEST));

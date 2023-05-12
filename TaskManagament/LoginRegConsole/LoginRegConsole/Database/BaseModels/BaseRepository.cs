@@ -1,18 +1,27 @@
 ﻿using LoginRegConsole.Database.BaseModel;
+using Newtonsoft.Json;
+using SendGrid.Helpers.Mail;
 
 namespace LoginRegConsole.Database.BaseModels
 {
 	public class BaseRepository<TDomain>
 		where TDomain : BaseEntity
 	{
-		public int Id { get; set; }
-
 		private readonly List<TDomain> _entries;
-		public BaseRepository(List<TDomain> entries)
-		{
-			_entries = entries;
-		}
+		private readonly string _filePath;
 
+
+		public BaseRepository(string filePath)
+		{
+			_filePath = filePath;
+			if (!File.Exists(_filePath))
+			{
+				File.Create(_filePath).Close();
+			}
+
+			string json = File.ReadAllText(_filePath);
+			_entries = JsonConvert.DeserializeObject<List<TDomain>>(json) ?? new List<TDomain>();
+		}
 
 		public List<TDomain> GetAll()
 		{
@@ -48,16 +57,17 @@ namespace LoginRegConsole.Database.BaseModels
 		public void Add(TDomain entry)
 		{
 			_entries.Add(entry);
+			SaveChanges();
 		}
 
 		public void Remove(TDomain entry)
 		{
 			_entries.Remove(entry);
+			SaveChanges();
 		}
 
 		public TDomain? GetBy(Predicate<TDomain> predicate)
 		{
-
 			foreach (var entry in _entries)
 			{
 				if (predicate(entry))
@@ -66,6 +76,12 @@ namespace LoginRegConsole.Database.BaseModels
 				}
 			}
 			return default;
+		}
+
+		private void SaveChanges()
+		{
+			string json = JsonConvert.SerializeObject(_entries, Formatting.Indented);
+			File.WriteAllText(_filePath, json);
 		}
 	}
 }

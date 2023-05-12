@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj": {}
+    "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj": {
+    "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
+        "projectUniqueName": "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
         "projectName": "LoginRegConsole",
-        "projectPath": "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
+        "projectPath": "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
         "packagesPath": "C:\\Users\\Jake\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\obj\\",
+        "outputPath": "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jake\\AppData\\Roaming\\NuGet\\NuGet.Config",

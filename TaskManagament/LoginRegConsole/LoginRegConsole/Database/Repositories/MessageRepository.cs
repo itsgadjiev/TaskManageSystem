@@ -13,7 +13,7 @@ namespace LoginRegConsole.Database.Repositories
 	public class MessageRepository : BaseRepository<Email>
 	{
 		public MessageRepository() 
-			: base(AppDbContext.Messages)
+			: base("AppMessages.json")
 		{
 		}
 

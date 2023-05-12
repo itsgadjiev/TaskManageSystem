@@ -13,7 +13,7 @@ namespace LoginRegConsole.Database.Repositories
 	public class BlogRepository : BaseRepository<Blog>
 	{
 		public BlogRepository() 
-			: base(AppDbContext.Blogs)
+			: base("AppBlogs.json")
 		{
 		}
 	}

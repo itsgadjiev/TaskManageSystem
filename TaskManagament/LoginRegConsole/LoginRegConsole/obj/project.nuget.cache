@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hVB//TU5/Re6KNZxetS+Q+xGNj6+42RAgnbNM6VR70XyB8RrF3e37Uu/6ibAhTIMKOJxHknLiCqLp+ZKyiJCow==",
+  "dgSpecHash": "MgiZfUo4v17soKz5ClV4Nok+FA2CZdzBj9mJpaI4p3n1eFAZ43xbZffiIkqPNnTegHexAqVu+yBEi+mpEtuh4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jake\\Desktop\\New folder (2)\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
+  "projectFilePath": "C:\\Users\\Jake\\Desktop\\TaskManageSystem\\TaskManagament\\LoginRegConsole\\LoginRegConsole\\LoginRegConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jake\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Jake\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
