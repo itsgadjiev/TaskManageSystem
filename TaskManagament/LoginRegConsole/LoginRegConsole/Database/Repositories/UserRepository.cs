@@ -9,13 +9,16 @@ namespace LoginRegConsole.Database.Repositories
 	public class UserRepository : BaseRepository<User>
 	{
 		public UserRepository()
-			: base("AppUsers.json")
-		{ AdminCreationSeed(); }
+			: base("User.json")
+		{
+
+			//AdminCreationSeed();
+		}
 
 
 		public static void AdminCreationSeed()
 		{
-			BaseRepository<User> baseRepository = new BaseRepository<User>("AppUsers.json"); 
+			BaseRepository<User> baseRepository = new BaseRepository<User>("User.json"); 
 			string name = "Super";
 			string surname = "Admin";
 			string email = "admin@gmail.com";
@@ -41,6 +44,7 @@ namespace LoginRegConsole.Database.Repositories
 		}
 		public void RemoveUserByEmail()
 		{
+			UserRepository userRepository = new UserRepository();	
 			User user = FindUserByEmail();
 			if (user == null)
 			{
@@ -53,13 +57,14 @@ namespace LoginRegConsole.Database.Repositories
 			}
 			else
 			{
-				AppDbContext.AppUsers.Remove(user);
+				userRepository.Remove(user);
 				CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESFULLY_DELETED)}");
 			}
 
 		}
 		public void RemoveUserById()
 		{
+			UserRepository userRepository = new UserRepository();
 			while (true)
 			{
 				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST));
@@ -72,7 +77,7 @@ namespace LoginRegConsole.Database.Repositories
 						{
 							if (item.Role != UserRoles.ADMIN)
 							{
-								AppDbContext.AppUsers.Remove(item);
+								userRepository.Remove(item);
 								CustomConsole.GreenLine($"{item.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESFULLY_DELETED)}");
 								return;
 							}

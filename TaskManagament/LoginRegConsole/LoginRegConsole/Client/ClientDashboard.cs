@@ -1,17 +1,7 @@
-﻿using LoginRegConsole.Admin.Commands.MessageSending;
-using LoginRegConsole.Admin.Commands.UserManagament;
-using LoginRegConsole.Client.Commands;
+﻿using LoginRegConsole.Client.Commands;
 using LoginRegConsole.Constants.Enums;
-using LoginRegConsole.Database.Models;
-using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
-using LoginRegConsole.Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoginRegConsole.Client
 {

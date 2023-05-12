@@ -34,7 +34,6 @@ namespace LoginRegConsole.Database.Models
 			BlogStatus = BlogStatus.WAITING;
 			Code = _code;
 		}
-		public List<BlogComment>? BlogComments { get; private set; } = AppDbContext.BlogComments;
 
 		public void ShowBlogInfo()
 		{

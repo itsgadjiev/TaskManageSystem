@@ -16,7 +16,6 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
 		public static void Handle()
 		{
 			UserRepository userRepository = new UserRepository();
-
 			User user = userRepository.FindUserByEmail();
 			if (user == null)
 			{
@@ -29,6 +28,7 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
 			else if (user.IsAdmin())
 			{
 				user.Role = UserRoles.USER;
+				userRepository.SaveChanges();
 				CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.DEPROMOTE_FROM_ADMIN)}");
 			}
 			else 

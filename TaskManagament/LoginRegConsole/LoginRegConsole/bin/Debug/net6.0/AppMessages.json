@@ -1,0 +1,31 @@
+[
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL34465 на верификации Дорогой jekah , hacili || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL34465 verifikasiyadadir jekah , hacili || status:WAITING",
+      "CONTENT_EN": "Your Blog BL34465 is on verification dear jekah , hacili || status:WAITING"
+    },
+    "SendTime": "2023-05-13T01:58:14.4551287+04:00",
+    "SendingUser": {
+      "Name": "jekah",
+      "Surname": "hacili",
+      "Email": "123321",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+      "Id": 4
+    },
+    "ReceivingUser": {
+      "Name": "jekah",
+      "Surname": "hacili",
+      "Email": "123321",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+      "Id": 4
+    },
+    "Id": 1
+  }
+]

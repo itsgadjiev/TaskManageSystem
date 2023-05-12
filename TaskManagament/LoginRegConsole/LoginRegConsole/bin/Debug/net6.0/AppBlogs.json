@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "BL34465",
+    "PostingUser": {
+      "Name": "jekah",
+      "Surname": "hacili",
+      "Email": "123321",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+      "Id": 4
+    },
+    "Title": {
+      "CONTENT_RU": "Privet ya vor",
+      "CONTENT_AZ": "Salam balam",
+      "CONTENT_EN": "hellooo"
+    },
+    "Body": {
+      "CONTENT_RU": "privetka",
+      "CONTENT_AZ": "salamkeee",
+      "CONTENT_EN": "sjsjsjsj"
+    },
+    "CreatedAt": "2023-05-13T01:58:14.4531794+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "BlogComments": [],
+    "Id": 1
+  }
+]

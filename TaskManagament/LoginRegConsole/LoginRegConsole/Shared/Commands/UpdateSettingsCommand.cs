@@ -1,5 +1,6 @@
 ﻿using LoginRegConsole.BaseRegistrationHelper;
 using LoginRegConsole.Database.Models;
+using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
 using System;
@@ -21,11 +22,13 @@ namespace LoginRegConsole.Shared.Commands
 
         public virtual void Handle()
         {
-			UserService.ActiveUser.Name = RegistrationHelper.NameValidation();
-			UserService.ActiveUser.Surname = RegistrationHelper.SurnameValidation();
-			UserService.ActiveUser.Password = RegistrationHelper.PasswordValidation();
-
-            CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
+            UserRepository userRepository= new UserRepository();
+            User user=userRepository.GetBy(x=>x.Email== UserService.ActiveUser.Email);
+			user.Name = RegistrationHelper.NameValidation();
+			user.Surname = RegistrationHelper.SurnameValidation();
+			user.Password = RegistrationHelper.PasswordValidation();
+			userRepository.SaveChanges();
+			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LoginRegConsole.Database.Models;
+using LoginRegConsole.Database.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,8 @@ namespace LoginRegConsole.Services
 	public class UserService
 	{
 		public static User ActiveUser { get; set; }
+
+
+	
 	}
 }

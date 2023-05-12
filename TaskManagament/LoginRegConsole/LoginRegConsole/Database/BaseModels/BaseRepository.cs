@@ -23,6 +23,18 @@ namespace LoginRegConsole.Database.BaseModels
 			_entries = JsonConvert.DeserializeObject<List<TDomain>>(json) ?? new List<TDomain>();
 		}
 
+		public void Remove(TDomain entry)
+		{
+
+			_entries.Remove(entry);
+			SaveChanges();
+		}
+		public void SaveChanges()
+		{
+			string json = JsonConvert.SerializeObject(_entries, Formatting.Indented);
+			File.WriteAllText(_filePath, json);
+		}
+
 		public List<TDomain> GetAll()
 		{
 			return _entries;
@@ -60,14 +72,11 @@ namespace LoginRegConsole.Database.BaseModels
 			SaveChanges();
 		}
 
-		public void Remove(TDomain entry)
-		{
-			_entries.Remove(entry);
-			SaveChanges();
-		}
+		
 
 		public TDomain? GetBy(Predicate<TDomain> predicate)
 		{
+
 			foreach (var entry in _entries)
 			{
 				if (predicate(entry))
@@ -78,10 +87,5 @@ namespace LoginRegConsole.Database.BaseModels
 			return default;
 		}
 
-		private void SaveChanges()
-		{
-			string json = JsonConvert.SerializeObject(_entries, Formatting.Indented);
-			File.WriteAllText(_filePath, json);
-		}
 	}
 }

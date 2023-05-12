@@ -88,5 +88,205 @@
     "IsActive": true,
     "RegistrationDate": "2023-05-13T00:12:06.2205001+04:00",
     "Id": 3
+  },
+  {
+    "Name": "jekah",
+    "Surname": "hacili",
+    "Email": "123321",
+    "Password": "123321",
+    "Role": "user",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+    "Id": 4
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:57:22.9926668+04:00",
+    "Id": 5
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:57:33.3381058+04:00",
+    "Id": 6
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:57:44.4837352+04:00",
+    "Id": 7
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:59:30.8101002+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:59:35.7724943+04:00",
+    "Id": 2
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T01:59:40.9323297+04:00",
+    "Id": 3
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:00:16.1223823+04:00",
+    "Id": 4
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:00:22.0339597+04:00",
+    "Id": 5
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:00:24.1977129+04:00",
+    "Id": 6
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:00:27.2123761+04:00",
+    "Id": 7
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:36:19.3823003+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:36:41.2325241+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:37:33.7872114+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:37:43.9555992+04:00",
+    "Id": 2
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:39:02.2037615+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:39:48.6887367+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:39:56.7477321+04:00",
+    "Id": 2
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:40:12.1572339+04:00",
+    "Id": 1
+  },
+  {
+    "Name": "Super",
+    "Surname": "Admin",
+    "Email": "admin@gmail.com",
+    "Password": "123321",
+    "Role": "admin",
+    "IsActive": true,
+    "RegistrationDate": "2023-05-13T02:40:31.8088296+04:00",
+    "Id": 1
   }
 ]

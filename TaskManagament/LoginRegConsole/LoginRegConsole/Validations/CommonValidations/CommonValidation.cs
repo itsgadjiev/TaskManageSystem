@@ -30,7 +30,7 @@ namespace LoginRegConsole.Validations.CommonValidations
             }
             else
             {
-                foreach (User user in userRepository.GetAll().ToList())
+                foreach (User user in userRepository.GetAll())
                 {
                     if (user.Email.ToLower() == eMail.ToLower())
                     {

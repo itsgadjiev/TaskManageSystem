@@ -33,6 +33,7 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
 			else 
 			{
 				user.IsActive = false;
+				userRepository.SaveChanges();
 				CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESFULL_BANNED_USER)}");
 			}
 		}
