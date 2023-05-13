@@ -23,7 +23,7 @@ namespace LoginRegConsole.Shared.Commands
 			List<Blog> blogs = blogRepository.GetAllBy(b => b.BlogStatus == BlogStatus.APPROVED);
 			List<BlogComment> blogComments = blogCommentRepository.GetAll();
 
-			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
+			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntryByKey<Content>(KeysForLanguages.CONTENT);
 
 			int counter = 1;
 			foreach (Blog blog in blogs)

@@ -18,7 +18,7 @@ namespace LoginRegConsole.Database.Repositories
 
 		public static void AdminCreationSeed()
 		{
-			BaseRepository<User> baseRepository = new BaseRepository<User>("User.json"); 
+			BaseRepository<User> baseRepository = new BaseRepository<User>("User.json");
 			string name = "Super";
 			string surname = "Admin";
 			string email = "admin@gmail.com";
@@ -44,8 +44,9 @@ namespace LoginRegConsole.Database.Repositories
 		}
 		public void RemoveUserByEmail()
 		{
-			UserRepository userRepository = new UserRepository();	
+			UserRepository userRepository = new UserRepository();
 			User user = FindUserByEmail();
+			user = userRepository.GetBy(x => x.Email == user.Email);
 			if (user == null)
 			{
 				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.INVALID_EMAIL));
@@ -67,34 +68,28 @@ namespace LoginRegConsole.Database.Repositories
 			UserRepository userRepository = new UserRepository();
 			while (true)
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST));
-				try
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST) + " " + "string");
+				string id = Console.ReadLine();
+				User user = null;
+				user = userRepository.GetBy(x => x.Id == id);
+
+				if (user is not null)
 				{
-					int id = int.Parse(Console.ReadLine());
-					foreach (var item in GetAll())
+					if (user.Role != UserRoles.ADMIN)
 					{
-						if (item.Id == id)
-						{
-							if (item.Role != UserRoles.ADMIN)
-							{
-								userRepository.Remove(item);
-								CustomConsole.GreenLine($"{item.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESFULLY_DELETED)}");
-								return;
-							}
-							CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ADMIN_CANT_BE_REMOVED));
-							return;
-						}
+						userRepository.Remove(user);
+						CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESFULLY_DELETED)}");
+						return;
 					}
-					CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
+					CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ADMIN_CANT_BE_REMOVED));
 					return;
 				}
-				catch
-				{
-					CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ENTER_CORECT_FORMAT));
-					break;
-				}
+				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
+				return;
 			}
-		}
 
+		}
 	}
+
 }
+

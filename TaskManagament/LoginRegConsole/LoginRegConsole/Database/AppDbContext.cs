@@ -1,9 +1,6 @@
 ﻿using LoginRegConsole.Constants.Roles;
-using LoginRegConsole.Database.AddSeedings;
-using LoginRegConsole.Database.BaseModels;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
-using System.Text.Json;
 
 namespace LoginRegConsole.Database
 {
@@ -13,7 +10,7 @@ namespace LoginRegConsole.Database
 		public static List<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
 		static AppDbContext()
 		{
-			//UserRepository.AdminCreationSeed();
+			UserRepository.AdminCreationSeed();
 		}
 
 		public static void UserCreationSeed()

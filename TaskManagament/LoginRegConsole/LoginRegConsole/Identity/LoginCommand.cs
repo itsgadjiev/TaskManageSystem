@@ -14,7 +14,8 @@ namespace LoginRegConsole.Identity
     {
         public static User Login()
         {
-            UserRepository userRepository = new UserRepository();
+			//UserRepository.AdminCreationSeed();
+			UserRepository userRepository = new UserRepository();
             Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.EMAIL_REQUEST));
             string email = Console.ReadLine();
 			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.PASSWORD_REQUEST));

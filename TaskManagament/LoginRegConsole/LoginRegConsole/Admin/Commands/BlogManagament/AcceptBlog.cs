@@ -24,9 +24,9 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public void Handle()
 		{
 			BlogRepository blogRepository = new BlogRepository();
-
-			int id = CustomTryParseForOptions.Handle();
-			Blog blog = blogRepository.GetBy(b=>b.Id==id);
+			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST) + "string" );
+			string id = Console.ReadLine();
+			Blog blog = blogRepository.GetBy(b=>b.Id.Equals(id));
 
 			if (blog is null)
 			{

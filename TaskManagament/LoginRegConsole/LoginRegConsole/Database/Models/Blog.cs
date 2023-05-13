@@ -10,7 +10,6 @@ namespace LoginRegConsole.Database.Models
 	{
         public string Code { get; set; }
 		public User PostingUser { get; set; }
-		protected static int _idCounter { get; set; }
 		public Content Title { get; set; }
 		public Content Body { get; set; }
 		public DateTime CreatedAt { get; set; }
@@ -19,7 +18,7 @@ namespace LoginRegConsole.Database.Models
 		public Blog(User user, Content blogTitle, Content blogBody)
 		{
 			PostingUser = user;
-			Id = ++_idCounter;
+			Id = Guid.NewGuid().ToString();
 			Title = blogTitle;
 			Body = blogBody;
 			CreatedAt = DateTime.Now;

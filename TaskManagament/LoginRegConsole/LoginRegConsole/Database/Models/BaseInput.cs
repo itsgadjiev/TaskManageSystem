@@ -10,14 +10,13 @@ namespace LoginRegConsole.Database.Models
 {
 	public class BaseInput : BaseEntity
 	{
-		protected static int _idCounter { get; set; }
 		public KeysForLanguages Key { get; set; }
 		public string Value { get; set; }
 		public SystemLanguage Language { get; set; }
 
 		public BaseInput()
 		{
-			Id = ++_idCounter;
+			Id = Guid.NewGuid().ToString();
 		}
 	}
 }

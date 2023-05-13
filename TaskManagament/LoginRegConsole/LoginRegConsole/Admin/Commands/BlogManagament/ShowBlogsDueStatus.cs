@@ -17,7 +17,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public static void Handle(BlogStatus blogStatus)
 		{
 			BlogRepository blogRepository = new BlogRepository();
-			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
+			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntryByKey<Content>(KeysForLanguages.CONTENT);
 			
 			int counter = 1;
 			foreach (var blog in blogRepository.GetAllBy(b => b.BlogStatus == blogStatus))

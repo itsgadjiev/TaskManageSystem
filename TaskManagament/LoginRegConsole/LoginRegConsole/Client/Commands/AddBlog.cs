@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using LoginRegConsole.Database;
-using LoginRegConsole.Database.Models;
+﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
-using LoginRegConsole.Extras;
-using LoginRegConsole.Helper;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validation.Blog;
-using LoginRegConsole.Validations.CommonValidations;
-using SendGrid.Helpers.Mail;
+using System.Reflection;
 
 namespace LoginRegConsole.Client.Commands
 {
@@ -27,17 +17,18 @@ namespace LoginRegConsole.Client.Commands
 			_blogBodyValidation = new BlogBodyValidation();
 		}
 
-		public async void Handle()
+		public void Handle()
 		{
 			BlogRepository blogRepository = new BlogRepository();
 			MessageService messageService = new MessageService();
-			
+			string blogTitle = string.Empty;
+			string blogBody = string.Empty;
+
 			Content contentForTitle = new Content();
 			Type typeForTitle = typeof(Content);
 			PropertyInfo[] propertiesOfTitle = typeForTitle.GetProperties();
 
-			string blogTitle = string.Empty;
-			string blogBody = string.Empty;
+
 
 			foreach (PropertyInfo propertyInfoForTitle in propertiesOfTitle)
 			{

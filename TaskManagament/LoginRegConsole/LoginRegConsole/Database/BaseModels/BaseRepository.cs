@@ -1,4 +1,6 @@
 ﻿using LoginRegConsole.Database.BaseModel;
+using LoginRegConsole.Database.Repositories;
+using LoginRegConsole.Services;
 using Newtonsoft.Json;
 using SendGrid.Helpers.Mail;
 
@@ -9,7 +11,6 @@ namespace LoginRegConsole.Database.BaseModels
 	{
 		private readonly List<TDomain> _entries;
 		private readonly string _filePath;
-
 
 		public BaseRepository(string filePath)
 		{
@@ -23,9 +24,13 @@ namespace LoginRegConsole.Database.BaseModels
 			_entries = JsonConvert.DeserializeObject<List<TDomain>>(json) ?? new List<TDomain>();
 		}
 
+		public void Add(TDomain entry)
+		{
+			_entries.Add(entry);
+			SaveChanges();
+		}
 		public void Remove(TDomain entry)
 		{
-
 			_entries.Remove(entry);
 			SaveChanges();
 		}
@@ -34,12 +39,10 @@ namespace LoginRegConsole.Database.BaseModels
 			string json = JsonConvert.SerializeObject(_entries, Formatting.Indented);
 			File.WriteAllText(_filePath, json);
 		}
-
 		public List<TDomain> GetAll()
 		{
 			return _entries;
 		}
-
 		public List<TDomain> GetAllBy(Predicate<TDomain> predicate)
 		{
 			List<TDomain> entries = new List<TDomain>();
@@ -52,27 +55,6 @@ namespace LoginRegConsole.Database.BaseModels
 			}
 			return entries;
 		}
-
-		public List<TDomain> GetAllBy(Predicate<TDomain> predicate1, Predicate<TDomain> predicate2)
-		{
-			List<TDomain> entries = new List<TDomain>();
-			foreach (TDomain entry in _entries)
-			{
-				if (predicate1(entry) && predicate2(entry))
-				{
-					entries.Add(entry);
-				}
-			}
-			return entries;
-		}
-
-		public void Add(TDomain entry)
-		{
-			_entries.Add(entry);
-			SaveChanges();
-		}
-		
-
 		public TDomain? GetBy(Predicate<TDomain> predicate)
 		{
 

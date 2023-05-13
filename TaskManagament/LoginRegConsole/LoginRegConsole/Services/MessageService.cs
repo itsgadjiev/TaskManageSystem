@@ -29,29 +29,47 @@ namespace LoginRegConsole.Services
 				.Replace(MessageTemplateKeywords.BLOG_STATUS, blog.BlogStatus.ToString());
 		}
 
+		//private Content PrepareContentForBlogCommentEmail(Blog blog)
+		//{
+		//	Content content = new Content();
+		//	PropertyInfo[] propsOfContent = LocalizationService.GetPropertiesOfEntry(content);
+
+		//	foreach (PropertyInfo propertyInfo in propsOfContent)
+		//	{
+		//		PropertyInfo prop = LocalizationService.GetPropertyOfEntryByString<MessageTemplate>("BLOG_COMMENT_SENDED_" + LocalizationService.CurrentLanguage);
+		//		if (propertyInfo.Name == "CONTENT_AZ")
+		//		{
+		//			propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_AZ, blog));
+		//			continue;
+		//		}
+		//		else if (propertyInfo.Name == "CONTENT_RU")
+		//		{
+		//			propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_RU, blog));
+		//			continue;
+		//		}
+		//		else if (propertyInfo.Name == "CONTENT_EN")
+		//		{
+		//			propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_EN, blog));
+		//			continue;
+		//		}
+		//	}
+
+		//	return content;
+
+		//}
+
 		private Content PrepareContentForBlogCommentEmail(Blog blog)
 		{
 			Content content = new Content();
-			Type type = typeof(Content);
-			PropertyInfo[] propsOfContent = type.GetProperties();
-
+			PropertyInfo[] propsOfContent = LocalizationService.GetPropertiesOfEntry(content);
+			MessageTemplate messageTemplate = new MessageTemplate();	
 			foreach (PropertyInfo propertyInfo in propsOfContent)
 			{
-				if (propertyInfo.Name == "CONTENT_AZ")
-				{
-					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_AZ, blog));
-					continue;
-				}
-				else if (propertyInfo.Name == "CONTENT_RU")
-				{
-					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_RU, blog));
-					continue;
-				}
-				else if (propertyInfo.Name == "CONTENT_EN")
-				{
-					propertyInfo.SetValue(content, PrepareMessageForBlog(MessageTemplate.BLOG_COMMENT_SENDED_EN, blog));
-					continue;
-				}
+				FieldInfo prop = LocalizationService.GetFieldOfEntryByString<MessageTemplate>("BLOG_COMMENT_SENDED_" + LocalizationService.CurrentLanguage);
+
+				propertyInfo.SetValue(content, PrepareMessageForBlog((string)prop.GetValue(messageTemplate), blog));
+				continue;
+
 			}
 
 			return content;
@@ -141,12 +159,10 @@ namespace LoginRegConsole.Services
 			Email sendingMessage = new Email(content, UserService.ActiveUser, user);
 			_messageRepository.Add(sendingMessage);
 		}
-
 		public void SendMessageForBlogDueStatus(Blog blog)
 		{
 			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
-
 		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
 		{
 			MessageService messageService = new MessageService();

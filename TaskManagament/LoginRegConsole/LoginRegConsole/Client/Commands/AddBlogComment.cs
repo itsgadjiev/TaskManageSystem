@@ -14,8 +14,8 @@ namespace LoginRegConsole.Client.Commands
 			BlogRepository BlogRepository = new BlogRepository();
 			BlogCommentRepository blogCommentRepository = new BlogCommentRepository();
 			Content content = new Content();
-			Type type = typeof(Content);
-			PropertyInfo[] properties = type.GetProperties();
+			PropertyInfo[] properties = LocalizationService.GetPropertiesOfEntry(content);
+
 			string messageBody = string.Empty;
 			Blog blog = null;
 

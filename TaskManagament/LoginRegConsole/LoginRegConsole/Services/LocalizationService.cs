@@ -1,7 +1,6 @@
 ﻿using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Constants.InputOnLanguages;
 using LoginRegConsole.Constants.Localisation;
-using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Helper;
 using System.Reflection;
 
@@ -20,10 +19,10 @@ namespace LoginRegConsole.Services
 							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
 
 			return (string)field.GetValue(null);
-			
+
 		}
 
-		public static PropertyInfo GetPropertyOfEntry<TDomain>(KeysForLanguages key)
+		public static PropertyInfo GetPropertyOfEntryByKey<TDomain>(KeysForLanguages key)
 		{
 			Type inputsOnSYSLanguage = typeof(TDomain);
 			PropertyInfo property = inputsOnSYSLanguage
@@ -32,6 +31,17 @@ namespace LoginRegConsole.Services
 							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
 
 			return property;
+		}
+
+		public static FieldInfo GetFieldOfEntryByString<TDomain>(string key)
+		{
+			Type inputsOnSYSLanguage = typeof(TDomain);
+			FieldInfo field = inputsOnSYSLanguage
+				.GetField(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
+							.Replace("{key}", key)
+							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
+
+			return field;
 		}
 
 		public static PropertyInfo[] GetPropertiesOfEntry<TDomain>(TDomain entry)
@@ -68,7 +78,7 @@ namespace LoginRegConsole.Services
 			}
 		}
 
-		
+
 	}
 }
 

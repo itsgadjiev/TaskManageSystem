@@ -4,7 +4,6 @@ namespace LoginRegConsole.Database.Models
 {
 	public class Email : BaseEntity
 	{
-		protected static int _idCounter { get; set; }
 		public Content Content { get; set; }
 		public DateTime SendTime { get; set; }
 		public User SendingUser { get; set; }
@@ -12,7 +11,7 @@ namespace LoginRegConsole.Database.Models
 
 		public Email(Content content, User sendingUser, User receivingUser)
 		{
-			Id = ++_idCounter;
+			Id = Guid.NewGuid().ToString();
 			Content = content;
 			SendTime = DateTime.Now;
 			SendingUser = sendingUser;

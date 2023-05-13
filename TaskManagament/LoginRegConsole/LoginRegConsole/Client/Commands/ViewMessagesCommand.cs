@@ -13,12 +13,7 @@ namespace LoginRegConsole.Client.Commands
 		public static void Handle()
 		{
 			MessageRepository messageRepository = new MessageRepository();
-			PropertyInfo property = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
-			//Type inputsOnSYSLanguage = typeof(Content);
-			//PropertyInfo property = inputsOnSYSLanguage
-			//	.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
-			//				.Replace("{key}", KeysForLanguages.CONTENT.ToString())
-			//				.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
+			PropertyInfo property = LocalizationService.GetPropertyOfEntryByKey<Content>(KeysForLanguages.CONTENT);
 
 			int counter = 1;
 			foreach (Email message in messageRepository.GetAllBy(m => m.ReceivingUser.Email == UserService.ActiveUser.Email))
