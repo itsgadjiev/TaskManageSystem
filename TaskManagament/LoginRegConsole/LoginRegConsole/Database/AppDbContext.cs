@@ -10,6 +10,7 @@ namespace LoginRegConsole.Database
 	public abstract class AppDbContext
 	{
 		public static List<BaseInput> BaseInputs { get; set; } = new List<BaseInput>();
+		public static List<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
 		static AppDbContext()
 		{
 			//UserRepository.AdminCreationSeed();

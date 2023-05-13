@@ -27,7 +27,9 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
             else if (user.IsAdmin() == false)
             {
                 user.IsActive = true;
-                CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY)}");
+				userRepository.SaveChanges();
+
+				CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY)}");
             }
         }
     }

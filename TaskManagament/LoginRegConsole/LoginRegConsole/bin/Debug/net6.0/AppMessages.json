@@ -27,5 +27,266 @@
       "Id": 4
     },
     "Id": 1
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL14253 на верификации Дорогой Cekayek , 123231 || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL14253 verifikasiyadadir Cekayek , 123231 || status:WAITING",
+      "CONTENT_EN": "Your Blog BL14253 is on verification dear Cekayek , 123231 || status:WAITING"
+    },
+    "SendTime": "2023-05-13T14:14:12.8971966+04:00",
+    "SendingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 2
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL65139 на верификации Дорогой Cekayek , 123231 || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL65139 verifikasiyadadir Cekayek , 123231 || status:WAITING",
+      "CONTENT_EN": "Your Blog BL65139 is on verification dear Cekayek , 123231 || status:WAITING"
+    },
+    "SendTime": "2023-05-13T14:23:32.676025+04:00",
+    "SendingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 3
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "На ваш блог под кодом BL83107 был добавлен комент от Cekayek , 123231 ",
+      "CONTENT_AZ": "BL83107 kodlu blogunuza Cekayek 123231 tərəfindən comment əlavə olundu ",
+      "CONTENT_EN": " Cekayek , 123231 commented your blog under code BL83107 "
+    },
+    "SendTime": "2023-05-13T17:30:17.9868064+04:00",
+    "SendingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 4
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL65139 принят Дорогой Cekayek , 123231 || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL65139 testiqlendi Cekayek , 123231 || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL65139 has been approved dear Cekayek , 123231 || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T17:33:14.0891612+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 5
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL11390 принят Дорогой jekah , hacili || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL11390 testiqlendi jekah , hacili || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL11390 has been approved dear jekah , hacili || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T17:33:29.4639969+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "jekah",
+      "Surname": "hacili",
+      "Email": "123321",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+      "Id": 4
+    },
+    "Id": 11
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL83107 принят Дорогой Cekayek , 123231 || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL83107 testiqlendi Cekayek , 123231 || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL83107 has been approved dear Cekayek , 123231 || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T17:33:46.4167723+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 18
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL65139 принят Дорогой Cekayek , 123231 || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL65139 testiqlendi Cekayek , 123231 || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL65139 has been approved dear Cekayek , 123231 || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T20:29:57.1375937+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 8
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL11390 принят Дорогой jekah , hacili || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL11390 testiqlendi jekah , hacili || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL11390 has been approved dear jekah , hacili || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T20:33:24.4898482+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "jekah",
+      "Surname": "hacili",
+      "Email": "123321",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T01:57:20.9037041+04:00",
+      "Id": 4
+    },
+    "Id": 9
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL83107 принят Дорогой Cekayek , 123231 || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL83107 testiqlendi Cekayek , 123231 || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL83107 has been approved dear Cekayek , 123231 || status:APPROVED"
+    },
+    "SendTime": "2023-05-13T20:33:34.7680669+04:00",
+    "SendingUser": {
+      "Name": "Ceykkaa",
+      "Surname": "hacili",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:43:15.6427516+04:00",
+      "Id": 1
+    },
+    "ReceivingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Id": 19
   }
 ]

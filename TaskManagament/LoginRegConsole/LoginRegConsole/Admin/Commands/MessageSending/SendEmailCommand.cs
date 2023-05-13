@@ -13,13 +13,12 @@ namespace LoginRegConsole.Admin.Commands.MessageSending
 		{
 			UserRepository userRep = new UserRepository();
 			MessageRepository messageRepository = new MessageRepository();
-
-
+			Content content = new Content();
+			PropertyInfo[] properties = LocalizationService.GetPropertiesOfEntry(content);
 			string messageBody = string.Empty;
 			User receivingUser = null;
-			Content content = new Content();
-			Type type = typeof(Content);
-			PropertyInfo[] properties = type.GetProperties();
+			//Type type = typeof(Content);
+			//PropertyInfo[] properties = type.GetProperties();
 
 			do
 			{

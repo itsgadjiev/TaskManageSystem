@@ -71,7 +71,6 @@ namespace LoginRegConsole.Database.BaseModels
 			_entries.Add(entry);
 			SaveChanges();
 		}
-
 		
 
 		public TDomain? GetBy(Predicate<TDomain> predicate)

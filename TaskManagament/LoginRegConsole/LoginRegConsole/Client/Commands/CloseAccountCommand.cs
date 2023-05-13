@@ -1,34 +1,27 @@
 ﻿using LoginRegConsole.Constants.Enums;
-using LoginRegConsole.Database;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoginRegConsole.Client.Commands
 {
 	public class CloseAccountCommand
 	{
-
 		public static void Handle()
 		{
 			UserRepository userRepository = new UserRepository();
-			
+			User user = userRepository.GetBy(x => x.Email == UserService.ActiveUser.Email);
+
 			Console.WriteLine(LocalizationService.GetTranslationByKey(KeysForLanguages.PASSWORD_REQUEST));
 			string pass = Console.ReadLine();
-
 			if (pass == "1")
 			{
 				return;
 			}
-			else if (pass == UserService.ActiveUser.Password)
+			else if (pass == user.Password)
 			{
-				userRepository.Remove(UserService.ActiveUser);	
+				userRepository.Remove(user);
 				CustomConsole.WarningLine($"{UserService.ActiveUser.ShowFullName()} {LocalizationService.GetTranslationByKey(KeysForLanguages.SUCCESFULLY_DELETED)}");
 				return;
 			}

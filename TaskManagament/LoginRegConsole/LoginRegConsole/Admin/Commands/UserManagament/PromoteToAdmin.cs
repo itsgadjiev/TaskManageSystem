@@ -30,7 +30,9 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
             else
             {
                 user.Role = UserRoles.ADMIN;
-                CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.PROMOTED_TO_ADMIN)}");
+				userRepository.SaveChanges();
+
+				CustomConsole.GreenLine($"{user.ShowFullName()} {LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.PROMOTED_TO_ADMIN)}");
             }
         }
 

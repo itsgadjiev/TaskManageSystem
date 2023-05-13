@@ -1,22 +1,14 @@
 ﻿using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Database.BaseModel;
+using LoginRegConsole.Database.Repositories;
+using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Database.Models
 {
+	
 	public class Blog : BaseEntity
 	{
-		private string _code;
-		public string Code
-		{
-			get { return _code; }
-			set
-			{
-				Random random = new Random();
-				int minNumber = 10000;
-				int maxNumber = 99999;
-				_code = "BL" + random.Next(minNumber, maxNumber).ToString();
-			}
-		}
+        public string Code { get; set; }
 		public User PostingUser { get; set; }
 		protected static int _idCounter { get; set; }
 		public Content Title { get; set; }
@@ -32,9 +24,8 @@ namespace LoginRegConsole.Database.Models
 			Body = blogBody;
 			CreatedAt = DateTime.Now;
 			BlogStatus = BlogStatus.WAITING;
-			Code = _code;
+			Code = GenarateCodeForBlog.Handle();
 		}
-
 		public void ShowBlogInfo()
 		{
             Console.WriteLine($"Code:{Code} CreatedAt:{CreatedAt}");

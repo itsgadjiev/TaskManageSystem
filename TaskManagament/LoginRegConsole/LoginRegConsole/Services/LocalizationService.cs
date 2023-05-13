@@ -22,6 +22,25 @@ namespace LoginRegConsole.Services
 			return (string)field.GetValue(null);
 			
 		}
+
+		public static PropertyInfo GetPropertyOfEntry<TDomain>(KeysForLanguages key)
+		{
+			Type inputsOnSYSLanguage = typeof(TDomain);
+			PropertyInfo property = inputsOnSYSLanguage
+				.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
+							.Replace("{key}", key.ToString())
+							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
+
+			return property;
+		}
+
+		public static PropertyInfo[] GetPropertiesOfEntry<TDomain>(TDomain entry)
+		{
+			Type inputsOnSYSLanguage = typeof(TDomain);
+			PropertyInfo[] property = inputsOnSYSLanguage.GetProperties()!;
+
+			return property;
+		}
 		public static void ChangeLanguageOfSystem()
 		{
 			while (true)

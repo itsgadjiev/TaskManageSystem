@@ -27,6 +27,8 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 			}
 			blog.BlogStatus = Constants.Enums.BlogStatus.REJECTED;
 			_messageService.SendMessageForBlogDueStatus(blog);
+			blogRepository.SaveChanges();
+
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 
 

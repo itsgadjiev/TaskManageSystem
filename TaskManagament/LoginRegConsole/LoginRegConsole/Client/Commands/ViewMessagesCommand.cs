@@ -13,24 +13,17 @@ namespace LoginRegConsole.Client.Commands
 		public static void Handle()
 		{
 			MessageRepository messageRepository = new MessageRepository();
-			Type inputsOnSYSLanguage = typeof(Content);
-			PropertyInfo property = inputsOnSYSLanguage
-				.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
-							.Replace("{key}", KeysForLanguages.CONTENT.ToString())
-							.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
+			PropertyInfo property = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
+			//Type inputsOnSYSLanguage = typeof(Content);
+			//PropertyInfo property = inputsOnSYSLanguage
+			//	.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
+			//				.Replace("{key}", KeysForLanguages.CONTENT.ToString())
+			//				.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
 
 			int counter = 1;
 			foreach (Email message in messageRepository.GetAllBy(m => m.ReceivingUser.Email == UserService.ActiveUser.Email))
 			{
-				Type type = typeof(Content);
-				PropertyInfo[] propOfCon = type.GetProperties();
-				foreach (PropertyInfo prop in propOfCon)
-				{
-					if (prop.Equals(property))
-					{
-						CustomConsole.WarningLine($"{counter++}.{message.SendingUser.ShowFullName()} || FROM:{message.SendingUser.Email} || SENDING DATE {$"{message.SendTime.ToString("f")}"} || {prop.GetValue(message.Content)}");
-					}
-				}
+				CustomConsole.WarningLine($"{counter++}.{message.SendingUser.ShowFullName()} || FROM:{message.SendingUser.Email} || SENDING DATE: {$"{message.SendTime.ToString("f")}"} || {property.GetValue(message.Content)}");
 			}
 
 			if (counter == 1)

@@ -17,24 +17,12 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public static void Handle(BlogStatus blogStatus)
 		{
 			BlogRepository blogRepository = new BlogRepository();
-			Type inputsOnSYSLanguage = typeof(Content);
-			PropertyInfo property = inputsOnSYSLanguage
-				.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
-							.Replace("{key}", KeysForLanguages.CONTENT.ToString())
-							.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
-
+			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
+			
 			int counter = 1;
 			foreach (var blog in blogRepository.GetAllBy(b => b.BlogStatus == blogStatus))
 			{
-				Type type = typeof(Content);
-				PropertyInfo[] propOfCon = type.GetProperties();
-				foreach (PropertyInfo prop in propOfCon)
-				{
-					if (prop.Equals(property))
-					{
-						CustomConsole.WarningLine($"{counter++}|| Blog Name:{blog.Code} || ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{prop.GetValue(blog.Title)} || Body:{prop.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
-					}
-				}
+				CustomConsole.WarningLine($"{counter++}|| Blog Name:{blog.Code} || ID:{blog.Id} || Posted BY:{blog.PostingUser.Name} {blog.PostingUser.Surname} || Title:{propertyOnSysLanguage.GetValue(blog.Title)} || Body:{propertyOnSysLanguage.GetValue(blog.Body)} || Creation date:{blog.CreatedAt}");
 			}
 
 			if (counter == 1)

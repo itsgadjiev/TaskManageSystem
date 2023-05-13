@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,38 +23,33 @@ namespace LoginRegConsole.Shared.Commands
 			List<Blog> blogs = blogRepository.GetAllBy(b => b.BlogStatus == BlogStatus.APPROVED);
 			List<BlogComment> blogComments = blogCommentRepository.GetAll();
 
-			Type inputsOnSYSLanguage = typeof(Content);
-			PropertyInfo propertyOnSysLanguage = inputsOnSYSLanguage
-				.GetProperty(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
-							.Replace("{key}", KeysForLanguages.CONTENT.ToString())
-							.Replace("{currentLanguage}", LocalizationService.CurrentLanguage.ToString()))!;
+			PropertyInfo propertyOnSysLanguage = LocalizationService.GetPropertyOfEntry<Content>(KeysForLanguages.CONTENT);
 
 			int counter = 1;
 			foreach (Blog blog in blogs)
 			{
-				Type type = typeof(Content);
-				PropertyInfo[] propOfCon = type.GetProperties();
-				foreach (PropertyInfo prop in propOfCon)
+				CustomConsole.GreenLine($"Publish Date:{blog.PostTime} || Blog Code:{blog.Code} || Blog Poster FullName:{blog.PostingUser.Name},{blog.PostingUser.Surname}");
+
+				Console.WriteLine($"{propertyOnSysLanguage.GetValue(blog.Title)}");
+				Console.WriteLine($"{propertyOnSysLanguage.GetValue(blog.Body)}");
+				CustomConsole.RedLine("-=-=-=-=-=-=-=-=-=Comments=-=-=-=-=-=-=-=-=-");
+				
+				foreach (BlogComment blogComment in blogComments.Where(bc => bc.BlogId == blog.Id))
 				{
-					if (prop.Equals(propertyOnSysLanguage))
-					{
-						CustomConsole.GreenLine($"Publish Date:{blog.PostTime} || Blog Code:{blog.Code} || Blog Poster FullName:{blog.PostingUser.Name},{blog.PostingUser.Surname}");
-						Console.WriteLine($"{prop.GetValue(blog.Title)}");
-						Console.WriteLine($"{prop.GetValue(blog.Body)}");
-
-						CustomConsole.RedLine("-=-=-=-=-=-=-=-=-=Comments=-=-=-=-=-=-=-=-=-");
-						foreach (BlogComment blogComment in blogComments.Where(bc => bc.BlogId == blog.Id))
-						{
-							CustomConsole.WarningLine($"{counter++}||{blogComment.PostingDate.ToString("d")} [{blogComment.PostingUser.Name} {blogComment.PostingUser.Surname}] -- {prop.GetValue(blogComment.Content)}");
-						}
-					}
+					CustomConsole.WarningLine($"{counter++}||{blogComment.PostingDate.ToString("d")} [{blogComment.PostingUser.Name} {blogComment.PostingUser.Surname}] -- {propertyOnSysLanguage.GetValue(blogComment.Content)}");
 				}
+				if (counter == 1)
+				{
+					CustomConsole.RedLine(LocalizationService.GetTranslationByKey(KeysForLanguages.NOT_FOUND));
+				}
+				else
+				{
+					counter = 1;
+				}
+
 			}
 
-			if (counter == 1)
-			{
-				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(KeysForLanguages.NOT_FOUND));
-			}
+			
 		}
 	}
 }

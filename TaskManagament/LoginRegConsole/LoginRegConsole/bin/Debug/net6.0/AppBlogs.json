@@ -1,6 +1,6 @@
 [
   {
-    "Code": "BL34465",
+    "Code": "BL11390",
     "PostingUser": {
       "Name": "jekah",
       "Surname": "hacili",
@@ -22,9 +22,62 @@
       "CONTENT_EN": "sjsjsjsj"
     },
     "CreatedAt": "2023-05-13T01:58:14.4531794+04:00",
-    "PostTime": "0001-01-01T00:00:00",
-    "BlogStatus": 1,
-    "BlogComments": [],
+    "PostTime": "2023-05-13T20:33:24.4890185+04:00",
+    "BlogStatus": 2,
     "Id": 1
+  },
+  {
+    "Code": "BL83107",
+    "PostingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Title": {
+      "CONTENT_RU": "Privet ya vor",
+      "CONTENT_AZ": "Salam qaqa",
+      "CONTENT_EN": "Hellooo"
+    },
+    "Body": {
+      "CONTENT_RU": "Privetka",
+      "CONTENT_AZ": "salamkaaa",
+      "CONTENT_EN": "hellloooooo"
+    },
+    "CreatedAt": "2023-05-13T14:14:12.8953386+04:00",
+    "PostTime": "2023-05-13T20:33:34.768+04:00",
+    "BlogStatus": 2,
+    "Id": 2
+  },
+  {
+    "Code": "BL65139",
+    "PostingUser": {
+      "Name": "Cekayek",
+      "Surname": "123231",
+      "Email": "333",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-13T02:28:04.3263174+04:00",
+      "Id": 1
+    },
+    "Title": {
+      "CONTENT_RU": "sdafasfasfasdf",
+      "CONTENT_AZ": "asdfasdfasdfas",
+      "CONTENT_EN": "dfasdfasdfasdf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdfasdfasdfasd",
+      "CONTENT_AZ": "fasdfasdfasd",
+      "CONTENT_EN": "fasdfasdfasdf"
+    },
+    "CreatedAt": "2023-05-13T14:23:22.4301084+04:00",
+    "PostTime": "2023-05-13T20:29:57.1364264+04:00",
+    "BlogStatus": 2,
+    "Id": 3
   }
 ]
