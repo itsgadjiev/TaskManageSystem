@@ -18,8 +18,16 @@ namespace LoginRegConsole.Client.Commands
 			PropertyInfo[] properties = LocalizationService.GetPropertiesOfEntry(content);
 
 			string messageBody = string.Empty;
-			Blog blog = null;
-			blog = GetExsistingApprovedBlog.Handle(blog);
+			Blog blog = GetExsistingApprovedBlog.Handle(); 
+			if (blog is null)
+			{
+				return;
+			}
+			if (blog.BlogStatus != Constants.Enums.BlogStatus.APPROVED)
+			{
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.FORBIDDEN));
+				return;
+			}
 
 			foreach (var property in properties)
 			{

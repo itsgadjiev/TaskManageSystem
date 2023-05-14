@@ -56,9 +56,9 @@ namespace LoginRegConsole.Services
 					case "3":
 						CurrentLanguage = SystemLanguage.EN;
 						return;
-					case "4":
-						CurrentLanguage = SystemLanguage.CHN;
-						return;
+					//case "4":
+					//	CurrentLanguage = SystemLanguage.CHN;
+					//	return;
 					default:
 						break;
 				}

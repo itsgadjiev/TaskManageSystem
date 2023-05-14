@@ -12,7 +12,8 @@ namespace LoginRegConsole.Client.Commands
 		}
 		public override void Handle()
 		{
-			base.Handle();
+
+			base.HandleBYReflection();
 		}
 
 	}

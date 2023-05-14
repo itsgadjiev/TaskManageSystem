@@ -10,7 +10,7 @@ namespace LoginRegConsole.Services
 {
 	public class UserService
 	{
-		public static User ActiveUser { get; set; }
+		public static User ActiveUser { get; set; } 
 
 
 	

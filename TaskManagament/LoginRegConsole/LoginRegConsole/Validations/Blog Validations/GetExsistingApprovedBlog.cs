@@ -7,30 +7,20 @@ namespace LoginRegConsole.Validations.Blog
 {
 	public class GetExsistingApprovedBlog
 	{
-		public static NeedBlog Handle(NeedBlog blog)
+		public static NeedBlog? Handle()
 		{
 			BlogRepository blogRepository = new BlogRepository();
 
-			do
+			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NAME_REQUEST) + " " + "blog");
+			string blogName = Console.ReadLine();
+			NeedBlog blog = blogRepository.GetBy(b => b.Code == blogName);
+
+			if (blog == null)
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NAME_REQUEST) + " " + "blog");
-				string blogName = Console.ReadLine();
-				blog = blogRepository.GetBy(b => b.Code == blogName);
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_NOT_FOUND));
 
-				if (blog == null)
-				{
-					Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_NOT_FOUND));
-
-				}
-				else if (blog.BlogStatus != Constants.Enums.BlogStatus.APPROVED)
-				{
-					Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.FORBIDDEN));
-					blog = null;
-				}
-
-			} while (blog == null);
-
-
+			}
+			
 			return blog;
 
 

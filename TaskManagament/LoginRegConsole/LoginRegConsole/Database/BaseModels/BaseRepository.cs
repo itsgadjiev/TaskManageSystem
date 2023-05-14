@@ -67,7 +67,9 @@ namespace LoginRegConsole.Database.BaseModels
 		}
 		public void Update(TDomain entity, Action<TDomain> updateAction)
 		{
+			int index = _entries.IndexOf(entity);
 			updateAction(entity);
+			_entries[index] = entity;
 			SaveChanges();
 		}
 

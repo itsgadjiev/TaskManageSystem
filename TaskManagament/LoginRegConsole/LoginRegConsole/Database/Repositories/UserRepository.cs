@@ -88,16 +88,16 @@ namespace LoginRegConsole.Database.Repositories
 			}
 
 		}
-		//public void UpdateSettings(User user, string name, string surname, string password)
-		//{
-		//	Update(user, u =>
-		//	{
-		//		u.Name = name;
-		//		u.Surname = surname;
-		//		u.Password = password;
-		//	});
+		public void UpdateSettings(User user, string name, string surname, string password)
+		{
+			Update(user, u =>
+			{
+				u.Name = name;
+				u.Surname = surname;
+				u.Password = password;
+			});
 
-		//}
+		}
 	}
 
 }

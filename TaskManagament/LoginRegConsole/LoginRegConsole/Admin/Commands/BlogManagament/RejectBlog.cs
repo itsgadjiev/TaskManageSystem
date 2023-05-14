@@ -24,6 +24,7 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
 				return;
 			}
+
 			Blog neededBlog = blogRepository.GetBy(b => b.Id == blog.Id);
 
 
