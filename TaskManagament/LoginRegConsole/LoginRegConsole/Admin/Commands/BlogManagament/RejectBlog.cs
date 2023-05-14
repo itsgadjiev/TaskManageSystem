@@ -24,17 +24,11 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
 				return;
 			}
-
 			Blog neededBlog = blogRepository.GetBy(b => b.Id == blog.Id);
-
-
-			neededBlog.BlogStatus = Constants.Enums.BlogStatus.REJECTED;
+			blogRepository.Update(neededBlog, b => b.BlogStatus = Constants.Enums.BlogStatus.REJECTED);
 			_messageService.SendMessageForBlogDueStatus(neededBlog);
 			MessageService.SendMessageDueStatusForBlogIRL(neededBlog);
-			blogRepository.SaveChanges();
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
-
-
 
 		}
 	}

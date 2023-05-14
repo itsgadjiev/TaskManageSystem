@@ -13,7 +13,7 @@ namespace LoginRegConsole.Database.Repositories
 			: base(JsonRepositoryNames.APP_USERS)
 		{
 
-			//AdminCreationSeed();
+
 		}
 		public static void AdminCreationSeed()
 		{
@@ -26,6 +26,7 @@ namespace LoginRegConsole.Database.Repositories
 			User user = new User(name, surname, email, password, UserRoles.ADMIN);
 			userRepository.Add(user);
 
+			
 		}
 		public User FindUserByEmail()
 		{

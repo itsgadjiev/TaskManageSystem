@@ -25,7 +25,6 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 			}
 			Blog neededBlog = blogRepository.GetBy(b => b.Id == blog.Id);
 
-
 			neededBlog.BlogStatus = Constants.Enums.BlogStatus.APPROVED;
 			neededBlog.PostTime = DateTime.Now;
 			_messageService.SendMessageForBlogDueStatus(neededBlog);

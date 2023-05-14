@@ -4,6 +4,7 @@ using LoginRegConsole.Helper;
 using LoginRegConsole.Identity;
 using LoginRegConsole.Services;
 using LoginRegConsole.Shared.Commands;
+using LoginRegConsole.Validations.CommonValidations;
 using System.Text;
 
 namespace LoginRegConsole
@@ -32,10 +33,10 @@ namespace LoginRegConsole
 				switch (choice)
 				{
 					case "1":
+						CheckAndCreateAdmin.Handle();
 						UserService.ActiveUser = LoginCommand.Login();
 						UserConditionChecker.Handle();
 						break;
-
 					case "2":
 						registerCommand.Register();
 						break;

@@ -16,7 +16,6 @@ namespace LoginRegConsole.Admin.Commands.UserManagament
 		public static void Handle()
 		{
 			UserRepository userRepository = new UserRepository();
-
 			User user = userRepository.FindUserByEmail();
 			if (user == null)
 			{
