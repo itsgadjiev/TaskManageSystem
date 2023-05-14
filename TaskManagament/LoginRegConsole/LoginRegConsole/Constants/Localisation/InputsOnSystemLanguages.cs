@@ -40,8 +40,7 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 		public const string LANGUAGE_CHANGE_OPTIONS_AZ = "Hansi dile kechmek isteyirsiniz\n" +
 					"1-Aze\n" +
 					"2-Rus\n" +
-					"3-Eng\n" +
-					"4-Chin";
+					"3-Eng\n" ;
 
 		public const string BLOG_NOT_FOUND_AZ = $"Bele blog yoxdur";
 		public const string INVALID_LOG_OR_PASS_AZ = $"Login ve ya parol sehvdir";
@@ -114,8 +113,7 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 		public const string LANGUAGE_CHANGE_OPTIONS_CHN = "你想切换到哪种语言\n" +
 				"1-阿兹\n" +
 				"2-俄语\n" +
-				"3-英语\n" +
-				"4-中国人";
+				"3-英语\n" ;
 
 		public const string BLOG_NOT_FOUND_CHN = $"找不到博客";
 		public const string INVALID_LOG_OR_PASS_CHN = $"登录名或密码错误";
@@ -186,8 +184,7 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 		public const string LANGUAGE_CHANGE_OPTIONS_EN = "To witch language you want to change\n" +
 					"1-Aze\n" +
 					"2-Rus\n" +
-					"3-Eng\n" +
-					"4-Chinese";
+					"3-Eng\n" ;
 
 		public const string BLOG_NOT_FOUND_EN = $"There is no blog";
 		public const string INVALID_LOG_OR_PASS_EN = $"Login or password is wrong";
@@ -301,8 +298,7 @@ namespace LoginRegConsole.Constants.InputOnLanguages
 		public const string LANGUAGE_CHANGE_OPTIONS_RU = "На какой язык хотите перейти\n" +
 					"1-Aze\n" +
 					"2-Рус\n" +
-					"3-Eng\n" +
-					"4-Китайский";
+					"3-Eng\n" ;
 
 
 		public const string MAIN_SELECT_OPTIONS_RU = "Что хотите сделать\n" +

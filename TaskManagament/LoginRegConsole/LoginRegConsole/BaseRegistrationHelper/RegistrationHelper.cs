@@ -79,7 +79,7 @@ namespace LoginRegConsole.BaseRegistrationHelper
 				else
 				{
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine("Format: { <(10-30 symbols)>@code.edu.az}");
+					Console.WriteLine("Format: { <(5-30 symbols)>@code.edu.az||yandex.com||gmail.com||code.edu.az||inbox.ru||rambler.ru}");
 					Console.ForegroundColor = ConsoleColor.White;
 
 				}

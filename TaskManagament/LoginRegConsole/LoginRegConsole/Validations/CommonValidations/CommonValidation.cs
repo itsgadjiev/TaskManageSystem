@@ -22,8 +22,8 @@ namespace LoginRegConsole.Validations.CommonValidations
         public static bool EmailValidation(string eMail, ref bool exsistingMail)
         {
             UserRepository userRepository = new UserRepository();
-            string emailPattern = @"^[a-zA-Z0-9]{10,30}@code\.edu\.az$";
-            bool isValidEmail = !Regex.IsMatch(eMail, emailPattern);
+			string emailPattern = @"^[\w.]{5,30}@(code\.edu\.az|yandex\.com|gmail\.com|mail\.ru|rambler\.ru|inbox\.ru)$";
+			bool isValidEmail = Regex.IsMatch(eMail, emailPattern);
             if (isValidEmail is false)
             {
                 return false;

@@ -237,28 +237,26 @@ namespace LoginRegConsole.Services
 		{
 			SendMessage(blog.PostingUser, PrepareContentForBlogEmail(blog));
 		}
+		public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
+		{
+			MessageService messageService = new MessageService();
+			MessageTemplate messageTemplate = new MessageTemplate();
+			Type type = messageTemplate.GetType();
+			FieldInfo field = type.GetField(blog.BlogStatus.ToString() + "_BLOG_" + "EN")!;
+			string apiKey = Environment.GetEnvironmentVariable(KeyForMessageService.API_KEY);
+			var client = new SendGridClient(apiKey);
+			var msg = new SendGridMessage()
+			{
+				From = new EmailAddress(KeyForMessageService.MESSAGE_SENDER_EMAIL, KeyForMessageService.MESSAGE_SENDER_FULLNAME),
+				Subject = $"Blog status",
+				PlainTextContent = $"{messageService.PrepareMessageForBlog((string)field.GetValue(messageTemplate), blog)}",
+			};
+			msg.AddTo(new EmailAddress($"{blog.PostingUser.Email}", $"{blog.PostingUser.Name}"));
 
+			var response = await client.SendEmailAsync(msg);
+			
 
-		//public static async Task SendMessageDueStatusForBlogIRL(Blog blog)
-		//{
-		//	MessageService messageService = new MessageService();
-
-		//	Type type = typeof(MessageTemplate);
-		//	FieldInfo field = type.GetField(blog.BlogStatus.ToString())!;
-		//	string apiKey = Environment.GetEnvironmentVariable(KeyForMessageService.API_KEY);
-		//	var client = new SendGridClient(apiKey);
-		//	var msg = new SendGridMessage()
-		//	{
-		//		From = new EmailAddress(KeyForMessageService.MESSAGE_SENDER_EMAIL, KeyForMessageService.MESSAGE_SENDER_FULLNAME),
-		//		Subject = $"Blog status",
-		//		PlainTextContent = $"{messageService.PrepareMessageForBlog((string)field.GetValue(null), blog)}",
-		//	};
-		//	msg.AddTo(new EmailAddress($"{blog.PostingUser.Email}", $"{blog.PostingUser.Name}"));
-
-		//	var response = await client.SendEmailAsync(msg);
-		//	Console.WriteLine(response.StatusCode);
-
-		//}
+		}
 
 	}
 }

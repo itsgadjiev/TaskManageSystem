@@ -201,5 +201,498 @@
       "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
     },
     "Id": "677a4216-7eda-4418-90ae-ed6d9855e8d7"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL10268 на верификации Дорогой Vagif , Pashayev || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL10268 verifikasiyadadir Vagif , Pashayev || status:WAITING",
+      "CONTENT_EN": "Your Blog BL10268 is on verification dear Vagif , Pashayev || status:WAITING"
+    },
+    "SendTime": "2023-05-14T20:51:38.4226178+04:00",
+    "SendingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "b28f888d-5284-4b02-96ff-ec961f93e902"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL96484 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL96484 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL96484 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T20:52:50.7289809+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "f0ffa749-b2b3-4502-8fbc-916849cb7f07"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL17365 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL17365 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL17365 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T20:54:21.9879509+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "a0a15f7c-b546-45cd-b265-1ee778a0fd85"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL22164 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL22164 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL22164 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T20:55:12.6411735+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "9f7033a2-a553-4754-9dc5-98e84506c640"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL68172 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL68172 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL68172 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:02:02.9057913+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "e5ce0456-0c9b-44d9-9278-b007730cf8da"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL45763 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL45763 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL45763 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:02:43.2930709+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "34842a43-b867-4b04-9ec3-3d541084e86e"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL27743 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL27743 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL27743 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:07:45.3292367+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "f3d46c84-f6d2-4c35-968d-d5ac1ab4a935"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL31300 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL31300 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL31300 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:10:10.3555869+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "a5f692e6-9f41-4e95-9deb-76cb2337ba2c"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL29005 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL29005 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL29005 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:12:59.8091053+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "d594f797-8ea4-4ae0-9676-1cc0de18b863"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL10028 на верификации Дорогой Aga , Badalov || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL10028 verifikasiyadadir Aga , Badalov || status:WAITING",
+      "CONTENT_EN": "Your Blog BL10028 is on verification dear Aga , Badalov || status:WAITING"
+    },
+    "SendTime": "2023-05-14T21:14:49.5931072+04:00",
+    "SendingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "bc481aef-a470-4534-8828-4e3bf2eef125"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL10028 принят Дорогой Aga , Badalov || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL10028 testiqlendi Aga , Badalov || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL10028 has been approved dear Aga , Badalov || status:APPROVED"
+    },
+    "SendTime": "2023-05-14T21:27:20.4370581+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "fb6a74ce-1bf0-421b-8ff8-fd640bc03efc"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL29005 отклонён Дорогой Aga , Badalov || status:REJECTED",
+      "CONTENT_AZ": "Sizin blog BL29005 redd edildi Aga , Badalov || status:REJECTED",
+      "CONTENT_EN": "Your Blog BL29005 has been rejected dear Aga , Badalov || status:REJECTED"
+    },
+    "SendTime": "2023-05-14T21:27:37.4536307+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "7235f3fd-05df-4f0e-939e-45b79dfc12d3"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL31300 принят Дорогой Aga , Badalov || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL31300 testiqlendi Aga , Badalov || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL31300 has been approved dear Aga , Badalov || status:APPROVED"
+    },
+    "SendTime": "2023-05-14T22:40:37.5784923+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "2d7f8d9a-8d6e-4151-8100-e84a6cca928a"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL31300 принят Дорогой Aga , Badalov || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL31300 testiqlendi Aga , Badalov || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL31300 has been approved dear Aga , Badalov || status:APPROVED"
+    },
+    "SendTime": "2023-05-14T22:42:16.303316+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "151bbbc1-3f60-4c79-99ba-b022862f7182"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL31300 принят Дорогой Aga , Badalov || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL31300 testiqlendi Aga , Badalov || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL31300 has been approved dear Aga , Badalov || status:APPROVED"
+    },
+    "SendTime": "2023-05-14T22:45:38.6496518+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "18f162f4-aab7-4ad3-ab84-985570f527d5"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL27743 отклонён Дорогой Aga , Badalov || status:REJECTED",
+      "CONTENT_AZ": "Sizin blog BL27743 redd edildi Aga , Badalov || status:REJECTED",
+      "CONTENT_EN": "Your Blog BL27743 has been rejected dear Aga , Badalov || status:REJECTED"
+    },
+    "SendTime": "2023-05-14T22:47:29.9885206+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Id": "9729e71c-8d53-4e0b-8a3d-91089b9f126c"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL64907 на верификации Дорогой Vagif , Pashayave || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL64907 verifikasiyadadir Vagif , Pashayave || status:WAITING",
+      "CONTENT_EN": "Your Blog BL64907 is on verification dear Vagif , Pashayave || status:WAITING"
+    },
+    "SendTime": "2023-05-14T23:01:59.7377322+04:00",
+    "SendingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayave",
+      "Email": "ceyhun.samsung2015@gmail.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T23:01:43.8288274+04:00",
+      "Id": "feeb4e67-4671-4a8b-80f3-55457aba9b3b"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayave",
+      "Email": "ceyhun.samsung2015@gmail.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T23:01:43.8288274+04:00",
+      "Id": "feeb4e67-4671-4a8b-80f3-55457aba9b3b"
+    },
+    "Id": "0510ec5e-2486-4c4b-b83a-91bbcbe4379e"
   }
 ]

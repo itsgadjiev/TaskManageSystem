@@ -21,7 +21,6 @@ namespace LoginRegConsole.Services
 			return (string)field.GetValue(null);
 
 		}
-
 		public static PropertyInfo GetPropertyOfEntryByKey<TDomain>(KeysForLanguages key)
 		{
 			Type inputsOnSYSLanguage = typeof(TDomain);
@@ -31,16 +30,6 @@ namespace LoginRegConsole.Services
 							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
 
 			return property;
-		}
-		public static FieldInfo GetFieldOfEntryByString<TDomain>(string key)
-		{
-			Type inputsOnSYSLanguage = typeof(TDomain);
-			FieldInfo field = inputsOnSYSLanguage
-				.GetField(TemplateForLanguageSearch.VALUE_OF_LANGUAGE
-							.Replace("{key}", key)
-							.Replace("{currentLanguage}", CurrentLanguage.ToString()))!;
-
-			return field;
 		}
 		public static PropertyInfo[] GetPropertiesOfEntry<TDomain>(TDomain entry)
 		{

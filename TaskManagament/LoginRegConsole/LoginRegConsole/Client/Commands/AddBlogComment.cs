@@ -19,7 +19,7 @@ namespace LoginRegConsole.Client.Commands
 
 			string messageBody = string.Empty;
 			Blog blog = null;
-			blog = GetExsistingBlog.Handle(blog);
+			blog = GetExsistingApprovedBlog.Handle(blog);
 
 			foreach (var property in properties)
 			{
@@ -27,6 +27,7 @@ namespace LoginRegConsole.Client.Commands
 			}
 
 			BlogComment blogComment = new BlogComment(blog, UserService.ActiveUser, content);
+			
 			messageService.SendMessageToPosterForBlogComment(blogComment);
 			blogCommentRepository.Add(blogComment);
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));

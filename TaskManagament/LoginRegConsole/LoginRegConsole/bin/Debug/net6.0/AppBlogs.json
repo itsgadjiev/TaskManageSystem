@@ -52,5 +52,248 @@
     "PostTime": "0001-01-01T00:00:00",
     "BlogStatus": 1,
     "Id": "1a170359-e31e-4510-914f-b582606efc33"
+  },
+  {
+    "Code": "BL10268",
+    "PostingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Title": {
+      "CONTENT_RU": "fsdg",
+      "CONTENT_AZ": "sdfgsdfg",
+      "CONTENT_EN": "sdfgsdfgsdf"
+    },
+    "Body": {
+      "CONTENT_RU": "gsdfgsdfg",
+      "CONTENT_AZ": "sdfgsdfg",
+      "CONTENT_EN": "sdfgsdf"
+    },
+    "CreatedAt": "2023-05-14T20:51:38.421451+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "83542c24-94cc-4bf6-9e42-9bb0c7b337c0"
+  },
+  {
+    "Code": "BL96484",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "Privet",
+      "CONTENT_AZ": "Salamm",
+      "CONTENT_EN": "Helooo"
+    },
+    "Body": {
+      "CONTENT_RU": "jsdfkasdfa",
+      "CONTENT_AZ": "asfdasdfasd",
+      "CONTENT_EN": "asdfasdf"
+    },
+    "CreatedAt": "2023-05-14T20:52:50.727913+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "b1e33c6a-6481-45b3-b21a-b99934b7e965"
+  },
+  {
+    "Code": "BL17365",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "sadfasdf",
+      "CONTENT_AZ": "asdfadsf",
+      "CONTENT_EN": "asdfasdf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdf",
+      "CONTENT_AZ": "asdfasdfasdf",
+      "CONTENT_EN": "asdfasdf"
+    },
+    "CreatedAt": "2023-05-14T20:54:21.9867346+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "c0287065-1f36-47a4-beb9-f28cac2fb9d3"
+  },
+  {
+    "Code": "BL68172",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "fdasfadsfa",
+      "CONTENT_AZ": "sfsdfasd",
+      "CONTENT_EN": "fasdfasd"
+    },
+    "Body": {
+      "CONTENT_RU": "fasdfasdfa",
+      "CONTENT_AZ": "sdfasdf",
+      "CONTENT_EN": "asdfasdfasd"
+    },
+    "CreatedAt": "2023-05-14T21:02:02.9047901+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "c6195287-fa3f-40db-97f3-ad5da169abde"
+  },
+  {
+    "Code": "BL27743",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "asfas",
+      "CONTENT_AZ": "dfasdfasdf",
+      "CONTENT_EN": "asdfasdf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdf",
+      "CONTENT_AZ": "asfasdfas",
+      "CONTENT_EN": "fasdfas"
+    },
+    "CreatedAt": "2023-05-14T21:07:45.3279713+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 3,
+    "Id": "beceec72-da96-4885-aa3a-52af0ab7457c"
+  },
+  {
+    "Code": "BL31300",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "daSDasdd",
+      "CONTENT_AZ": "asdfasdfa",
+      "CONTENT_EN": "sdfasdfasd"
+    },
+    "Body": {
+      "CONTENT_RU": "fasdfasdf",
+      "CONTENT_AZ": "asdfasdf",
+      "CONTENT_EN": "asdfasdf"
+    },
+    "CreatedAt": "2023-05-14T21:10:10.3539917+04:00",
+    "PostTime": "2023-05-14T22:45:38.6490942+04:00",
+    "BlogStatus": 2,
+    "Id": "de044ad0-d816-4d78-8810-629bd32aad4b"
+  },
+  {
+    "Code": "BL29005",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "fasfasdf",
+      "CONTENT_AZ": "asdfasf",
+      "CONTENT_EN": "asdfasfasf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdfasd",
+      "CONTENT_AZ": "fadsfsf",
+      "CONTENT_EN": "asdfasdfasd"
+    },
+    "CreatedAt": "2023-05-14T21:12:59.8084633+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 3,
+    "Id": "04dabca0-7ad4-4a31-9de2-034dcd382dc8"
+  },
+  {
+    "Code": "BL10028",
+    "PostingUser": {
+      "Name": "Aga",
+      "Surname": "Badalov",
+      "Email": "aghabadalov@yandex.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T20:52:12.4692252+04:00",
+      "Id": "2d95f45f-4913-42cb-a40a-2b72aa5d4613"
+    },
+    "Title": {
+      "CONTENT_RU": "asdfadsfasd",
+      "CONTENT_AZ": "fasdfasd",
+      "CONTENT_EN": "fasdfasdf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdfasd",
+      "CONTENT_AZ": "fasdfasd",
+      "CONTENT_EN": "fasdfasdf"
+    },
+    "CreatedAt": "2023-05-14T21:14:49.5919478+04:00",
+    "PostTime": "2023-05-14T21:27:20.4365071+04:00",
+    "BlogStatus": 2,
+    "Id": "b7d99f20-addc-4ddc-bb90-479e34d982aa"
+  },
+  {
+    "Code": "BL64907",
+    "PostingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayave",
+      "Email": "ceyhun.samsung2015@gmail.com",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T23:01:43.8288274+04:00",
+      "Id": "feeb4e67-4671-4a8b-80f3-55457aba9b3b"
+    },
+    "Title": {
+      "CONTENT_RU": "dgsfdgsdfgsdfg",
+      "CONTENT_AZ": "sdfgsdfgs",
+      "CONTENT_EN": "dfgsdfgsdfg"
+    },
+    "Body": {
+      "CONTENT_RU": "sdfgsdfgs",
+      "CONTENT_AZ": "dfgfsdgsdfgsfd",
+      "CONTENT_EN": "gsdfgsdfg"
+    },
+    "CreatedAt": "2023-05-14T23:01:59.7358478+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "dbf62ff1-3f8a-4425-a4c7-73924c440c4c"
   }
 ]

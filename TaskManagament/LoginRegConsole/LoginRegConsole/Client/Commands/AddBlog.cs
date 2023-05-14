@@ -45,6 +45,7 @@ namespace LoginRegConsole.Client.Commands
 
 			Blog blog = new Blog(UserService.ActiveUser, contentForTitle, contentForBody);
 			messageService.SendMessageForBlogDueStatus(blog);
+			MessageService.SendMessageDueStatusForBlogIRL(blog);
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 			blog.ShowBlogInfo();
 			blogRepository.Add(blog);

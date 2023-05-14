@@ -3,6 +3,7 @@ using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Helper;
 using LoginRegConsole.Services;
+using LoginRegConsole.Validations.Blog_Validations;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
 {
@@ -17,19 +18,21 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public void Handle()
 		{
 			BlogRepository blogRepository = new BlogRepository();
-			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST) + "string");
-			string id =Console.ReadLine();
-			Blog blog = blogRepository.GetBy(b => b.Id == id);
+			Blog blog = GetExsistingBlog.Handle();
 			if (blog is null)
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
+				CustomConsole.RedLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.NOT_FOUND));
 				return;
 			}
-			blog.BlogStatus = Constants.Enums.BlogStatus.REJECTED;
-			_messageService.SendMessageForBlogDueStatus(blog);
-			blogRepository.SaveChanges();
+			Blog neededBlog = blogRepository.GetBy(b => b.Id == blog.Id);
 
+
+			neededBlog.BlogStatus = Constants.Enums.BlogStatus.REJECTED;
+			_messageService.SendMessageForBlogDueStatus(neededBlog);
+			MessageService.SendMessageDueStatusForBlogIRL(neededBlog);
+			blogRepository.SaveChanges();
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
+
 
 
 		}

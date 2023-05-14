@@ -15,8 +15,6 @@ namespace LoginRegConsole.Database.Repositories
 
 			//AdminCreationSeed();
 		}
-
-
 		public static void AdminCreationSeed()
 		{
 			UserRepository userRepository = new UserRepository();
