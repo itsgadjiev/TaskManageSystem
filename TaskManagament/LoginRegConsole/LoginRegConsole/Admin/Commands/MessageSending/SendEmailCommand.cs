@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace LoginRegConsole.Admin.Commands.MessageSending
 {
-	public class SendEmailCommand
+    public class SendEmailCommand
 	{
 		public static void Handle()
 		{

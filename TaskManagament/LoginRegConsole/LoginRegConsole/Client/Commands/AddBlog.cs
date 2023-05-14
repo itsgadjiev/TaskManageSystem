@@ -1,12 +1,13 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
+using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validation.Blog;
 using System.Reflection;
 
 namespace LoginRegConsole.Client.Commands
 {
-	public class AddBlog
+    public class AddBlog
 	{
 		private readonly BlogBodyValidation _blogBodyValidation;
 		private readonly BlogTitleValidation _blogTitleValidation;
@@ -21,25 +22,20 @@ namespace LoginRegConsole.Client.Commands
 		{
 			BlogRepository blogRepository = new BlogRepository();
 			MessageService messageService = new MessageService();
+			Content contentForBody = new Content();
+			Content contentForTitle = new Content();
+			PropertyInfo[] propertiesOfBody= LocalizationService.GetPropertiesOfEntry(contentForBody);
+			PropertyInfo[] propertiesOfTitle= LocalizationService.GetPropertiesOfEntry(contentForTitle);
 			string blogTitle = string.Empty;
 			string blogBody = string.Empty;
 
-			Content contentForTitle = new Content();
-			Type typeForTitle = typeof(Content);
-			PropertyInfo[] propertiesOfTitle = typeForTitle.GetProperties();
-
-
+			
 
 			foreach (PropertyInfo propertyInfoForTitle in propertiesOfTitle)
 			{
 				blogTitle = _blogTitleValidation.Handle(propertyInfoForTitle);
 				propertyInfoForTitle.SetValue(contentForTitle, blogTitle);
 			}
-
-			Content contentForBody = new Content();
-			Type typeForBody = typeof(Content);
-			PropertyInfo[] propertiesOfBody = typeForBody.GetProperties();
-
 
 			foreach (PropertyInfo propertyInfoForBody in propertiesOfBody)
 			{
@@ -49,6 +45,7 @@ namespace LoginRegConsole.Client.Commands
 
 			Blog blog = new Blog(UserService.ActiveUser, contentForTitle, contentForBody);
 			messageService.SendMessageForBlogDueStatus(blog);
+			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 			blog.ShowBlogInfo();
 			blogRepository.Add(blog);
 

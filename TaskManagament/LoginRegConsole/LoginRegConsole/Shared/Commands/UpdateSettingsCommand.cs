@@ -3,6 +3,7 @@ using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Services;
+using System.Security.Cryptography.X509Certificates;
 
 namespace LoginRegConsole.Shared.Commands
 {
@@ -19,6 +20,7 @@ namespace LoginRegConsole.Shared.Commands
 		{
 			UserRepository userRepository = new UserRepository();
 			User user = userRepository.GetBy(x => x.Email == UserService.ActiveUser.Email);
+			
 			user.Name = RegistrationHelper.NameValidation();
 			user.Surname = RegistrationHelper.SurnameValidation();
 			user.Password = RegistrationHelper.PasswordValidation();

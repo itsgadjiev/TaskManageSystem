@@ -22,14 +22,14 @@ namespace LoginRegConsole.Admin
 		{
 			RegistrationHelper registrationHelper = new RegistrationHelper();
 			RegisterCommand registerCommand = new RegisterCommand(registrationHelper);
-			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ADMINDAHSBOARD_INTRO));
+			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(KeysForLanguages.ADMINDAHSBOARD_INTRO));
 
 			UpdateSettingsForAdminCommand updateSettingsForAdminCommand = new UpdateSettingsForAdminCommand();
 			string choice = string.Empty;
 			UserRepository userRepository = new UserRepository();
 			do
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ADMINDASHBOARD));
+				Console.WriteLine(LocalizationService.GetTranslationByKey(KeysForLanguages.ADMINDASHBOARD));
 
 				choice = Console.ReadLine();
 				switch (choice)

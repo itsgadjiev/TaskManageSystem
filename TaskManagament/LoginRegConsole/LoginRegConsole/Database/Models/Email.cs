@@ -2,7 +2,7 @@
 
 namespace LoginRegConsole.Database.Models
 {
-	public class Email : BaseEntity
+    public class Email : BaseEntity
 	{
 		public Content Content { get; set; }
 		public DateTime SendTime { get; set; }

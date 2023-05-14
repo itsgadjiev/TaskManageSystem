@@ -1,8 +1,6 @@
 ﻿using LoginRegConsole.Database.BaseModel;
-using LoginRegConsole.Database.Repositories;
-using LoginRegConsole.Services;
 using Newtonsoft.Json;
-using SendGrid.Helpers.Mail;
+using System.Reflection;
 
 namespace LoginRegConsole.Database.BaseModels
 {
@@ -66,6 +64,11 @@ namespace LoginRegConsole.Database.BaseModels
 				}
 			}
 			return default;
+		}
+		public void Update(TDomain entity, Action<TDomain> updateAction)
+		{
+			updateAction(entity);
+			SaveChanges();
 		}
 
 	}

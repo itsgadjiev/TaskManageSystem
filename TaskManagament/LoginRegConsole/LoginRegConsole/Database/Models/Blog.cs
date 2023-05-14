@@ -5,8 +5,8 @@ using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Database.Models
 {
-	
-	public class Blog : BaseEntity
+
+    public class Blog : BaseEntity
 	{
         public string Code { get; set; }
 		public User PostingUser { get; set; }

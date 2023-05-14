@@ -1,4 +1,5 @@
-﻿using LoginRegConsole.Constants.Roles;
+﻿using LoginRegConsole.Constants.RepositoryConstants;
+using LoginRegConsole.Constants.Roles;
 using LoginRegConsole.Database.BaseModels;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Extras;
@@ -9,7 +10,7 @@ namespace LoginRegConsole.Database.Repositories
 	public class UserRepository : BaseRepository<User>
 	{
 		public UserRepository()
-			: base("User.json")
+			: base(JsonRepositoryNames.APP_USERS)
 		{
 
 			//AdminCreationSeed();
@@ -18,14 +19,14 @@ namespace LoginRegConsole.Database.Repositories
 
 		public static void AdminCreationSeed()
 		{
-			BaseRepository<User> baseRepository = new BaseRepository<User>("User.json");
+			UserRepository userRepository = new UserRepository();
 			string name = "Super";
 			string surname = "Admin";
 			string email = "admin@gmail.com";
 			string password = "123321";
 
 			User user = new User(name, surname, email, password, UserRoles.ADMIN);
-			baseRepository.Add(user);
+			userRepository.Add(user);
 
 		}
 		public User FindUserByEmail()
@@ -89,6 +90,16 @@ namespace LoginRegConsole.Database.Repositories
 			}
 
 		}
+		//public void UpdateSettings(User user, string name, string surname, string password)
+		//{
+		//	Update(user, u =>
+		//	{
+		//		u.Name = name;
+		//		u.Surname = surname;
+		//		u.Password = password;
+		//	});
+
+		//}
 	}
 
 }

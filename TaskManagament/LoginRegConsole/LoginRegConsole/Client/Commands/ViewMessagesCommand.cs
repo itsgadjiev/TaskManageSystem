@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace LoginRegConsole.Client.Commands
 {
-	public class ViewMessagesCommand
+    public class ViewMessagesCommand
 	{
 		public static void Handle()
 		{

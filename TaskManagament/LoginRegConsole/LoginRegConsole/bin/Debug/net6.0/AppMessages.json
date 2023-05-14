@@ -1,0 +1,205 @@
+[
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL83979 на верификации Дорогой Vagif , Pashayev || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL83979 verifikasiyadadir Vagif , Pashayev || status:WAITING",
+      "CONTENT_EN": "Your Blog BL83979 is on verification dear Vagif , Pashayev || status:WAITING"
+    },
+    "SendTime": "2023-05-14T16:37:22.4485731+04:00",
+    "SendingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "771e3603-61b8-4aba-b05d-114c2da79087"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "На ваш блог под кодом BL83979 был добавлен комент от Vagif , Pashayev ",
+      "CONTENT_AZ": "BL83979 kodlu blogunuza Vagif Pashayev tərəfindən comment əlavə olundu ",
+      "CONTENT_EN": " Vagif , Pashayev commented your blog under code BL83979 "
+    },
+    "SendTime": "2023-05-14T16:38:21.9194114+04:00",
+    "SendingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "0db08ff5-98e0-4b8e-a92a-4a5217919ae6"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL83979 принят Дорогой Vagif , Pashayev || status:APPROVED",
+      "CONTENT_AZ": "Sizin blog BL83979 testiqlendi Vagif , Pashayev || status:APPROVED",
+      "CONTENT_EN": "Your Blog BL83979 has been approved dear Vagif , Pashayev || status:APPROVED"
+    },
+    "SendTime": "2023-05-14T16:41:03.9645269+04:00",
+    "SendingUser": {
+      "Name": "Super",
+      "Surname": "Admin",
+      "Email": "admin@gmail.com",
+      "Password": "123321",
+      "Role": "admin",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:35:41.468278+04:00",
+      "Id": "13e1e58b-0518-4066-869a-b033fbf5a1f7"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "4f441298-4563-4161-8118-31b69dd0421f"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "На ваш блог под кодом BL83979 был добавлен комент от Vagif , Pashayev ",
+      "CONTENT_AZ": "BL83979 kodlu blogunuza Vagif Pashayev tərəfindən comment əlavə olundu ",
+      "CONTENT_EN": " Vagif , Pashayev commented your blog under code BL83979 "
+    },
+    "SendTime": "2023-05-14T18:02:37.2642026+04:00",
+    "SendingUser": {
+      "Name": "Ceyhun",
+      "Surname": "Hacili",
+      "Email": "1",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T17:53:02.6892264+04:00",
+      "Id": "9f9fb6a6-dac7-4960-ad5b-e1425492d035"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "2d4f26ad-5141-4db8-aba6-320f49a9350b"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "На ваш блог под кодом BL83979 был добавлен комент от Vagif , Pashayev ",
+      "CONTENT_AZ": "BL83979 kodlu blogunuza Vagif Pashayev tərəfindən comment əlavə olundu ",
+      "CONTENT_EN": " Vagif , Pashayev commented your blog under code BL83979 "
+    },
+    "SendTime": "2023-05-14T18:06:09.6063927+04:00",
+    "SendingUser": {
+      "Name": "Ceyhun",
+      "Surname": "Hacili",
+      "Email": "1",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T17:53:02.6892264+04:00",
+      "Id": "9f9fb6a6-dac7-4960-ad5b-e1425492d035"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "bde6f0dc-d8ba-4738-aa8d-203f708205fe"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "На ваш блог под кодом BL83979 был добавлен комент от Ceyhun , Hacili ",
+      "CONTENT_AZ": "BL83979 kodlu blogunuza Ceyhun Hacili tərəfindən comment əlavə olundu ",
+      "CONTENT_EN": " Ceyhun , Hacili commented your blog under code BL83979 "
+    },
+    "SendTime": "2023-05-14T18:18:41.2012377+04:00",
+    "SendingUser": {
+      "Name": "Ceyhun",
+      "Surname": "Hacili",
+      "Email": "1",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T17:53:02.6892264+04:00",
+      "Id": "9f9fb6a6-dac7-4960-ad5b-e1425492d035"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "903108be-dd14-481c-9549-195a17bb034b"
+  },
+  {
+    "Content": {
+      "CONTENT_RU": "Ваш блог BL24136 на верификации Дорогой Vagif , Pashayev || status:WAITING",
+      "CONTENT_AZ": "Sizin blog BL24136 verifikasiyadadir Vagif , Pashayev || status:WAITING",
+      "CONTENT_EN": "Your Blog BL24136 is on verification dear Vagif , Pashayev || status:WAITING"
+    },
+    "SendTime": "2023-05-14T18:19:31.3150198+04:00",
+    "SendingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "ReceivingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Id": "677a4216-7eda-4418-90ae-ed6d9855e8d7"
+  }
+]

@@ -1,16 +1,10 @@
-﻿using LoginRegConsole.Admin;
-using LoginRegConsole.BaseRegistrationHelper;
-using LoginRegConsole.Client;
-using LoginRegConsole.Database;
-using LoginRegConsole.Database.Models;
-using LoginRegConsole.Extras;
+﻿using LoginRegConsole.BaseRegistrationHelper;
+using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Helper;
 using LoginRegConsole.Identity;
 using LoginRegConsole.Services;
 using LoginRegConsole.Shared.Commands;
-using System.Data;
 using System.Text;
-using System.Xml.Linq;
 
 namespace LoginRegConsole
 {
@@ -22,13 +16,13 @@ namespace LoginRegConsole
 		}
 		public static void Handle()
 		{
+			
 			RegistrationHelper registrationHelper = new RegistrationHelper();
 			RegisterCommand registerCommand = new RegisterCommand(registrationHelper);
-			string choice = string.Empty;
 			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.INTRO_FOR_SYSTEM));
-			Console.OutputEncoding = Encoding.UTF8;
-			Console.InputEncoding = Encoding.UTF8;
+			ChangeEncodingTypeOfProject.Handle();
 
+			string choice = string.Empty;
 			do
 			{
 				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.MAIN_SELECT_OPTIONS));

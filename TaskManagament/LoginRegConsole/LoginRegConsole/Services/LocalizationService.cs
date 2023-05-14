@@ -32,7 +32,6 @@ namespace LoginRegConsole.Services
 
 			return property;
 		}
-
 		public static FieldInfo GetFieldOfEntryByString<TDomain>(string key)
 		{
 			Type inputsOnSYSLanguage = typeof(TDomain);
@@ -43,7 +42,6 @@ namespace LoginRegConsole.Services
 
 			return field;
 		}
-
 		public static PropertyInfo[] GetPropertiesOfEntry<TDomain>(TDomain entry)
 		{
 			Type inputsOnSYSLanguage = typeof(TDomain);

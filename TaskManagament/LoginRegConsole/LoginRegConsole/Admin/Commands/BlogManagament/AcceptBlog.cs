@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-using LoginRegConsole.Database;
-using LoginRegConsole.Database.Models;
+﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
-using LoginRegConsole.Helper;
 using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
@@ -24,9 +16,9 @@ namespace LoginRegConsole.Admin.Commands.BlogManagament
 		public void Handle()
 		{
 			BlogRepository blogRepository = new BlogRepository();
-			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST) + "string" );
+			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.ID_REQUEST) + "string");
 			string id = Console.ReadLine();
-			Blog blog = blogRepository.GetBy(b=>b.Id.Equals(id));
+			Blog blog = blogRepository.GetBy(b => b.Id.Equals(id));
 
 			if (blog is null)
 			{

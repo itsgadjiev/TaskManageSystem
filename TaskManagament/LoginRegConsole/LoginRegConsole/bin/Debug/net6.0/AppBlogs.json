@@ -1,0 +1,56 @@
+[
+  {
+    "Code": "BL83979",
+    "PostingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Title": {
+      "CONTENT_RU": "Privet ya vor",
+      "CONTENT_AZ": "Salam vor",
+      "CONTENT_EN": "Hello vor"
+    },
+    "Body": {
+      "CONTENT_RU": "kak dela",
+      "CONTENT_AZ": "necesen",
+      "CONTENT_EN": "how urrr"
+    },
+    "CreatedAt": "2023-05-14T16:37:22.446349+04:00",
+    "PostTime": "2023-05-14T16:41:03.9644665+04:00",
+    "BlogStatus": 2,
+    "Id": "c4eb513a-293d-44a1-bfb9-58f4926dbc63"
+  },
+  {
+    "Code": "BL24136",
+    "PostingUser": {
+      "Name": "Vagif",
+      "Surname": "Pashayev",
+      "Email": "2",
+      "Password": "123321",
+      "Role": "user",
+      "IsActive": true,
+      "RegistrationDate": "2023-05-14T16:36:56.1209335+04:00",
+      "Id": "1ec643fb-e20f-45d3-af9c-cc294c7d80c1"
+    },
+    "Title": {
+      "CONTENT_RU": "fasdf",
+      "CONTENT_AZ": "asdfasdf",
+      "CONTENT_EN": "asfasdf"
+    },
+    "Body": {
+      "CONTENT_RU": "asdfasdfas",
+      "CONTENT_AZ": "dfasdfasdf",
+      "CONTENT_EN": "asdfasdfasf"
+    },
+    "CreatedAt": "2023-05-14T18:19:31.3141742+04:00",
+    "PostTime": "0001-01-01T00:00:00",
+    "BlogStatus": 1,
+    "Id": "1a170359-e31e-4510-914f-b582606efc33"
+  }
+]

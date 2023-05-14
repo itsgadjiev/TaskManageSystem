@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LoginRegConsole.Constants.Enums
+﻿namespace LoginRegConsole.Constants.Enums
 {
     public enum BlogStatus
     {
