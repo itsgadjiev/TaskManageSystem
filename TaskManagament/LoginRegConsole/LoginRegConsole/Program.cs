@@ -22,7 +22,7 @@ namespace LoginRegConsole
 			RegisterCommand registerCommand = new RegisterCommand(registrationHelper);
 			Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.INTRO_FOR_SYSTEM));
 			ChangeEncodingTypeOfProject.Handle();
-
+			CheckAndCreateAdmin.Handle();
 			string choice = string.Empty;
 			do
 			{
@@ -33,7 +33,6 @@ namespace LoginRegConsole
 				switch (choice)
 				{
 					case "1":
-						CheckAndCreateAdmin.Handle();
 						UserService.ActiveUser = LoginCommand.Login();
 						UserConditionChecker.Handle();
 						break;

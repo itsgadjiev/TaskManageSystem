@@ -2,6 +2,7 @@
 using LoginRegConsole.Database.BaseModel;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Services;
+using System.Reflection.Metadata;
 
 namespace LoginRegConsole.Database.Models
 {
@@ -15,7 +16,7 @@ namespace LoginRegConsole.Database.Models
 		public DateTime CreatedAt { get; set; }
 		public DateTime PostTime { get; set; }
 		public BlogStatus BlogStatus { get; set; }
-		public Blog(User user, Content blogTitle, Content blogBody)
+		public Blog(User user, Content blogTitle, Content blogBody,string code)
 		{
 			PostingUser = user;
 			Id = Guid.NewGuid().ToString();
@@ -23,11 +24,16 @@ namespace LoginRegConsole.Database.Models
 			Body = blogBody;
 			CreatedAt = DateTime.Now;
 			BlogStatus = BlogStatus.WAITING;
-			Code = GenarateCodeForBlog.Handle();
+			Code = code;
 		}
 		public void ShowBlogInfo()
 		{
             Console.WriteLine($"Code:{Code} CreatedAt:{CreatedAt}");
         }
+
+		public string GetStatusOfBlog()
+		{
+			return BlogStatus.ToString();
+		}
 	}
 }

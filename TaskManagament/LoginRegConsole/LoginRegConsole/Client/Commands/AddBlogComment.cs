@@ -1,14 +1,16 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validations.Blog;
 using LoginRegConsole.Validations.Blog_Comment;
 using System.Reflection;
+using System.Windows.Input;
 
 namespace LoginRegConsole.Client.Commands
 {
-	public class AddBlogComment
+	public class AddBlogComment : ICommandHandler
 	{
 		public void Handle()
 		{

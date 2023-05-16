@@ -2,13 +2,14 @@
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Client.Commands
 {
-	public class CloseAccountCommand
+	public class CloseAccountCommand : ICommandHandler
 	{
-		public static void Handle()
+		public void Handle()
 		{
 			UserRepository userRepository = new UserRepository();
 			User user = userRepository.GetBy(x => x.Email == UserService.ActiveUser.Email);

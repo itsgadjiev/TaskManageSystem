@@ -1,5 +1,6 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
+using LoginRegConsole.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace LoginRegConsole.Admin.Commands.UserManagament
 {
-	public static class ShowUsers
+	public class ShowUsers: ICommandHandler
 	{
-		public static void Handle()
+		public void Handle()
 		{
 			UserRepository userRepository = new UserRepository();
 

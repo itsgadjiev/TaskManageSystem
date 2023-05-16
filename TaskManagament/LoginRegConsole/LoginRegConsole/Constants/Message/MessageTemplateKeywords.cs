@@ -14,5 +14,10 @@ namespace LoginRegConsole.Constants
         public const string USER_NAME_FOR_BLOG = "{user-name}";
         public const string USER_SURNAME_FOR_BLOG = "{user-surname}";
         public const string BLOG_CODE = "{blog-code}";
-    }
+
+
+        public const string BLOG_COMMENT_SENDED_= "BLOG_COMMENT_SENDED_";
+        public const string _BLOG_ = "_BLOG_";
+
+	}
 }

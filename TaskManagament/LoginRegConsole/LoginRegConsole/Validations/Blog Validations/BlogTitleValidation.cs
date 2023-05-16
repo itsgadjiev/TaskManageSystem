@@ -11,7 +11,7 @@ namespace LoginRegConsole.Validation.Blog
 		{
 			while (true)
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_TITLE_INPUT) + " " + propertyInfo.Name.Substring(propertyInfo.Name.Length - 2, 2));
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_TITLE_INPUT) + " " + GetLanguageDueContent.Handle(propertyInfo));
 				string blogTitle = Console.ReadLine();
 
 				if (CommonValidation.IsLengthBeetween(InputLengthValidationsForBlog.MIN_LENGTH_BLOG_TITLE, InputLengthValidationsForBlog.MAX_LENGTH_BLOG_TITLE, blogTitle))

@@ -2,12 +2,13 @@
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Helper;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validations.Blog_Validations;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
 {
-	public class RejectBlog
+	public class RejectBlog : ICommandHandler
 	{
 		private readonly MessageService _messageService;
 

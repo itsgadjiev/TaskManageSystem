@@ -6,6 +6,7 @@ using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
 using LoginRegConsole.Identity;
+using LoginRegConsole.Infrostructure;
 using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Admin
@@ -35,16 +36,16 @@ namespace LoginRegConsole.Admin
 				switch (choice)
 				{
 					case "1":
-						ShowUsers.Handle();
+						CommandRouter.Route<ShowUsers>();
 						break;
 					case "2":
 						userRepository.RemoveUserById();
 						break;
 					case "3":
-						PromoteToAdmin.Handle();
+						CommandRouter.Route<PromoteToAdmin>();
 						break;
 					case "4":
-						DepromoteFromAdminCommand.Handle();
+						CommandRouter.Route<DepromoteFromAdminCommand>();
 						break;
 					case "5":
 						updateSettingsForAdminCommand.Handle();
@@ -53,13 +54,13 @@ namespace LoginRegConsole.Admin
 						userRepository.RemoveUserByEmail();
 						break;
 					case "7":
-						BanUserCommand.Handle();
+						CommandRouter.Route<BanUserCommand>();
 						break;
 					case "8":
-						DisBanUserCommand.Handle();
+						CommandRouter.Route<DisBanUserCommand>();
 						break;
 					case "9":
-						SendEmailCommand.Handle();
+						CommandRouter.Route<SendEmailCommand>();
 						break;
 					case "10":
 						registerCommand.Register();
@@ -74,18 +75,16 @@ namespace LoginRegConsole.Admin
 						ShowBlogsDueStatus.Handle(BlogStatus.REJECTED);
 						break;
 					case "14":
-						AcceptBlog acceptBlog = new AcceptBlog();
-						acceptBlog.Handle();
+						CommandRouter.Route<AcceptBlog>();
 						break;
 					case "15":
-						RejectBlog rejectBlog = new RejectBlog();
-						rejectBlog.Handle();
+						CommandRouter.Route<RejectBlog>();
 						break;
 					case "16":
 						LocalizationService.ChangeLanguageOfSystem();
 						break;
 					default:
-						break;
+						break; ;
 				}
 			} while (choice != "0");
 		}

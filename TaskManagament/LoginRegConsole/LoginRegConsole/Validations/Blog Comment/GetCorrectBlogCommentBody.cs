@@ -17,7 +17,7 @@ namespace LoginRegConsole.Validations.Blog_Comment
 			string messageBody=string.Empty;
 			do
 			{
-				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT) + " " + property.Name.Substring(property.Name.Length - 2, 2));
+				Console.WriteLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.BLOG_BODY_INPUT) + " " + GetLanguageDueContent.Handle(property));
 				messageBody = Console.ReadLine();
 				property.SetValue(entry, messageBody);
 			} while (!CommonValidation.IsLengthBeetween(5, 50, messageBody));

@@ -1,15 +1,16 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validations.Comment;
 using System.Reflection;
 
 namespace LoginRegConsole.Admin.Commands.MessageSending
 {
-	public class SendEmailCommand
+	public class SendEmailCommand : ICommandHandler
 	{
-		public static void Handle()
+		public void Handle()
 		{
 			UserRepository userRep = new UserRepository();
 			MessageRepository messageRepository = new MessageRepository();

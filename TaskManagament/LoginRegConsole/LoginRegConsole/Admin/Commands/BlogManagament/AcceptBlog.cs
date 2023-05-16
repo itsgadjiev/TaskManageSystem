@@ -1,12 +1,13 @@
 ﻿using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using LoginRegConsole.Validations.Blog_Validations;
 
 namespace LoginRegConsole.Admin.Commands.BlogManagament
 {
-	public class AcceptBlog
+	public class AcceptBlog : ICommandHandler
 	{
 		private readonly MessageService _messageService;
 

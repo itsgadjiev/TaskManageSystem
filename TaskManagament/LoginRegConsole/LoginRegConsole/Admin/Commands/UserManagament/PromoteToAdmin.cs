@@ -2,6 +2,7 @@
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace LoginRegConsole.Admin.Commands.UserManagament
 {
-    public class PromoteToAdmin
-    {
+    public class PromoteToAdmin : ICommandHandler
+	{
 
-        public static void Handle()
+        public void Handle()
         {
             UserRepository userRepository = new UserRepository();
 			User user = userRepository.FindUserByEmail();

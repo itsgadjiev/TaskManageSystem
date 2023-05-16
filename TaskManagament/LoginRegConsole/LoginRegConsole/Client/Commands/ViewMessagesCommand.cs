@@ -3,14 +3,15 @@ using LoginRegConsole.Constants.Localisation;
 using LoginRegConsole.Database.Models;
 using LoginRegConsole.Database.Repositories;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Interfaces;
 using LoginRegConsole.Services;
 using System.Reflection;
 
 namespace LoginRegConsole.Client.Commands
 {
-    public class ViewMessagesCommand
+    public class ViewMessagesCommand : ICommandHandler
 	{
-		public static void Handle()
+		public void Handle()
 		{
 			MessageRepository messageRepository = new MessageRepository();
 			PropertyInfo property = LocalizationService.GetPropertyOfEntryByKey<Content>(KeysForLanguages.CONTENT);

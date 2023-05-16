@@ -36,6 +36,9 @@ namespace LoginRegConsole.Shared.Commands
 			string password = RegistrationHelper.PasswordValidation();
 
 			userRepository.UpdateSettings(userRepository.GetBy(u => u.Email == UserService.ActiveUser.Email), name, lastName, password);
+			UserService.ActiveUser.Name= name;
+			UserService.ActiveUser.Surname = lastName;
+			UserService.ActiveUser.Password = password;
 
 			CustomConsole.GreenLine(LocalizationService.GetTranslationByKey(Constants.Enums.KeysForLanguages.SUCCESSFULLY));
 			Console.WriteLine(UserService.ActiveUser.ShowFullName());

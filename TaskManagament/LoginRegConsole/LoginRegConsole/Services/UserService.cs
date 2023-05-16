@@ -12,7 +12,6 @@ namespace LoginRegConsole.Services
 	{
 		public static User ActiveUser { get; set; } 
 
-
 	
 	}
 }

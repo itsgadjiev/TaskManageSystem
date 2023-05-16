@@ -1,6 +1,7 @@
 ﻿using LoginRegConsole.Client.Commands;
 using LoginRegConsole.Constants.Enums;
 using LoginRegConsole.Extras;
+using LoginRegConsole.Infrostructure;
 using LoginRegConsole.Services;
 
 namespace LoginRegConsole.Client
@@ -26,18 +27,16 @@ namespace LoginRegConsole.Client
 						updateSettingsForUser.Handle();
 						break;
 					case "2":
-						CloseAccountCommand.Handle();
+						CommandRouter.Route<CloseAccountCommand>();
 						return;
 					case "3":
-						ViewMessagesCommand.Handle();
+						CommandRouter.Route<ViewMessagesCommand>();
 						break;
 					case "4":
-						AddBlog addBlog = new AddBlog();
-						addBlog.Handle();
+						CommandRouter.Route<AddBlog>();
 						break;
 					case "5":
-						AddBlogComment addBlogComment = new AddBlogComment();
-						addBlogComment.Handle();
+						CommandRouter.Route<AddBlogComment>();
 						break;
 					case "6":
 						LocalizationService.ChangeLanguageOfSystem();
